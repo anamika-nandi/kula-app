@@ -34,73 +34,71 @@ const SignIn: React.FC<SignInProps> = (props) => {
         alignItems="center"
         justifyContent="center"
       >
-        <Stack py="3" px="4" maxW="335px" w="full">
-          <Text textStyle="heading" color="white" textAlign="center">
+        <Stack maxW="335px" w="full">
+          <Text textStyle="heading" color="white" textAlign="center" mb="10">
             Create your kula account and make an app
           </Text>
-          <Button
-            textStyle="btntext"
-            textAlign="center"
-            w="full"
-            bg="black"
-            border="none"
-            leftIcon={
-              <Image
-                src="/icons/apple.svg"
-                height={22}
-                width={18}
-                alt="apple"
-              />
-            }
-          >
-            Sign up with Apple
-          </Button>
-          <Button
-            textStyle="btntext"
-            textAlign="center"
-            w="full"
-            bg="white"
-            border="none"
-            leftIcon={
-              <Image
-                src="/icons/google.svg"
-                height={22}
-                width={22}
-                alt="google"
-              />
-            }
-          >
-            Sign up with Google
-          </Button>
-          <Button
-            textStyle="btntext"
-            textAlign="center"
-            w="full"
-            bg="white"
-            border="none"
-            leftIcon={
-              <Image
-                src="/icons/google.svg"
-                height={22}
-                width={22}
-                alt="google"
-              />
-            }
-          >
-            Sign up with Email
-          </Button>
+          <Stack rowGap="4">
+            <Button
+              textStyle="btntext"
+              w="full"
+              bg="black"
+              border="none"
+              leftIcon={
+                <Box>
+                  <Image
+                    src="/icons/apple.svg"
+                    height={22}
+                    width={18}
+                    alt="apple"
+                  />
+                </Box>
+              }
+            >
+              <Box>Sign up with Apple</Box>
+            </Button>
 
-          <Text textStyle="heading2" color="white" textAlign="center">
-            By singning in you agree to our{" "}
-            <Text as="span" textDecor="underline">
-              Privacy
-            </Text>{" "}
-            &
-            <Text as="span" textDecor="underline">
-              Terms
+            <Button
+              textStyle="btntext"
+              textAlign="center"
+              w="full"
+              bg="white"
+              color="black"
+              border="none"
+              leftIcon={
+                <Image
+                  src="/icons/google.svg"
+                  height={22}
+                  width={22}
+                  alt="google"
+                />
+              }
+            >
+              Sign up with Google
+            </Button>
+            <Button
+              textStyle="btntext"
+              textAlign="center"
+              w="full"
+              color="white"
+              bg="button.blue"
+              border="none"
+            >
+              Sign up with Email
+            </Button>
+
+            <Text textStyle="heading2" color="white" textAlign="center">
+              By singning in you agree to our{" "}
+              <Text as="span" textDecor="underline">
+                Privacy
+              </Text>{" "}
+              &
+              <Text as="span" textDecor="underline">
+                Terms
+              </Text>
+              .
             </Text>
-            .
-          </Text>
+          </Stack>
         </Stack>
         <Box>
           <Image

@@ -5,8 +5,9 @@ const colors = {
   "form-blue": "#367CFF",
   button: {
     blue: "#027AFF",
-
+    lightblue: "#50BBE9",
     orange: "#FF3A30",
+
     purple: "#AF53DE",
   },
 
