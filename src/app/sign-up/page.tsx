@@ -146,7 +146,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
-                              backgroundColor="button.purple"
+                              backgroundColor="purple"
                             >
                               <Image
                                 src="/icons/email.svg"

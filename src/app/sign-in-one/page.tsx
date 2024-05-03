@@ -1,21 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Container,
-  HStack,
-  Stack,
-  VStack,
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
-  Box,
-  Text,
-  InputLeftElement,
-  InputGroup,
-} from "@chakra-ui/react";
-import { Formik, Form, Field } from "formik";
-import Link from "next/link";
+import { Container, HStack, Stack, Button, Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 interface SignInProps {}
@@ -81,7 +66,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
               textAlign="center"
               w="full"
               color="white"
-              bg="button.blue"
+              bg="blue"
               border="none"
             >
               Sign up with Email

@@ -3,19 +3,16 @@ const colors = {
   black: "#000000",
   white: "#FFFFFF",
   "form-blue": "#367CFF",
-  button: {
-    blue: "#027AFF",
-    lightblue: "#50BBE9",
-    orange: "#FF3A30",
+  blue: "#027AFF",
+  lightblue: "#50BBE9",
 
-    purple: "#AF53DE",
-  },
+  orange: "#FF3A30",
 
-  icon: {
-    "icon-orange": "#FF9500",
-    "icon-gray": "#8E8E93",
-    "icon-yellow": "#FFCC00",
-  },
+  purple: "#AF53DE",
+  "icon-orange": "#FF9500",
+  "icon-gray": "#8E8E93",
+  "icon-yellow": "#FFCC00",
+  yellow: "#FBBC04",
 };
 
 export default colors;

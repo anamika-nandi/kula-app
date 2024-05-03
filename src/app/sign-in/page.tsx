@@ -119,7 +119,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
-                              backgroundColor="button.purple"
+                              backgroundColor="purple"
                             >
                               <Image
                                 src="/icons/email.svg"
@@ -199,7 +199,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
                   border="none"
                   textAlign="center"
                   w="full"
-                  bg="button.blue"
+                  bg="blue"
                 >
                   Sign in with E-Mail
                 </Button>

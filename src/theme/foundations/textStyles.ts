@@ -27,6 +27,13 @@ const textStyles = {
     lineHeight: ["14px", "16px"],
     fontWeight: "medium",
   },
+  heading3: {
+    fontFamily: "Sofia Pro",
+    fontSize: "30px",
+    lineHeight: "40px",
+    fontWeight: "bold",
+    letterSpacing: "0.33px",
+  },
   btntext: {
     fontFamily: "SF Pro Display",
     fontSize: ["12px", "14px", "16px"],

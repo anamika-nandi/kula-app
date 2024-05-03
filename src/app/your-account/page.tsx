@@ -52,7 +52,7 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
           py="3px"
           borderRadius={8}
           color="white"
-          bg="button.lightblue"
+          bg="lightblue"
           border="none"
         >
           Change
@@ -147,7 +147,7 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
-                              backgroundColor="button.purple"
+                              backgroundColor="purple"
                             >
                               <Image
                                 src="/icons/round.svg"
@@ -181,7 +181,7 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
           textAlign="center"
           w="full"
           color="white"
-          bg="button.orange"
+          bg="orange"
           border="none"
         >
           Log Out
@@ -215,7 +215,7 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
             w="59px"
             borderRadius={8}
             color="white"
-            bg="button.lightblue"
+            bg="lightblue"
             border="none"
           >
             Copy
