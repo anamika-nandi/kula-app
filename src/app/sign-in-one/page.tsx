@@ -2,6 +2,7 @@
 import React from "react";
 import { Container, HStack, Stack, Button, Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface SignInProps {}
 
@@ -11,8 +12,13 @@ interface FormValues {
 }
 
 const SignIn: React.FC<SignInProps> = (props) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/signup");
+  };
   return (
-    <Container maxW="container.xl" backgroundColor="#23AAE3">
+    <Container maxW="container.xl">
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -68,6 +74,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
               color="white"
               bg="blue"
               border="none"
+              onClick={handleClick}
             >
               Sign up with Email
             </Button>

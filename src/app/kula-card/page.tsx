@@ -59,7 +59,7 @@ const kulaCardData = [
 
 const KulaCard: React.FC<KulaCardProps> = (props) => {
   return (
-    <Container maxW="container.xl" backgroundColor="#23AAE3">
+    <Container maxW="container.xl">
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}

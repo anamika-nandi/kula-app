@@ -5,7 +5,7 @@ const colors = {
   "form-blue": "#367CFF",
   blue: "#027AFF",
   lightblue: "#50BBE9",
-
+  bgblue: "#29ABE2",
   orange: "#FF3A30",
 
   purple: "#AF53DE",

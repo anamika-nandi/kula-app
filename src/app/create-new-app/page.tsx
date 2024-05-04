@@ -28,7 +28,7 @@ interface FormValues {
 
 const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
   return (
-    <Container maxW="container.xl" backgroundColor="#23AAE3">
+    <Container maxW="container.xl">
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -62,13 +62,13 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                           w="full"
                           h="full"
                           minH="50px"
-                          bg="white"
                         >
                           <Input
                             isRequired
                             {...field}
                             placeholder="Your Awesome App"
                             rounded="6px"
+                            bg="white"
                             w="full"
                             h="full"
                             minH="50px"
@@ -110,7 +110,6 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                           w="full"
                           h="full"
                           minH="50px"
-                          bg="white"
                           border="none"
                         >
                           <Input
@@ -118,6 +117,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             {...field}
                             placeholder="www.your-website.com"
                             rounded="6px"
+                            bg="white"
                             w="full"
                             h="full"
                             minH="50px"

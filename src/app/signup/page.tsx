@@ -47,7 +47,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
             mt="5"
           >
             <Text>Already have an account? </Text>
-            <Link href="/signin" passHref>
+            <Link href="/login" passHref>
               <Text as="a" textDecor="underline" color="form-blue">
                 Log in here
               </Text>
@@ -71,14 +71,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                   {({ field }: any) => (
                     <FormControl>
                       <FormLabel textStyle="formlabel">Your Name</FormLabel>
-                      <InputGroup
-                        display="flex"
-                        alignItems="center"
-                        w="full"
-                        h="full"
-                        minH="50px"
-                        gap="10"
-                      >
+                      <InputGroup w="full" h="full" minH="50px">
                         <Input
                           isRequired
                           {...field}
@@ -98,7 +91,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
-                              backgroundColor="icon.icon-orange"
+                              backgroundColor="icon-orange"
                             >
                               <Image
                                 src="/icons/name.svg"

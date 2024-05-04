@@ -1,6 +1,10 @@
+import { background } from "@chakra-ui/react";
+
 const styles = {
   global: {
-    body: {},
+    body: {
+      background: "bgblue",
+    },
   },
 };
 

@@ -18,19 +18,18 @@ import { Formik, Form, Field } from "formik";
 import Link from "next/link";
 import Image from "next/image";
 
-interface YourAccountProps {}
+interface AccountProps {}
 
 interface FormValues {
   email: string;
   name: string;
 }
 
-const YourAccount: React.FC<YourAccountProps> = (props) => {
+const Account: React.FC<AccountProps> = (props) => {
   return (
     <Container
       maxW="container.xl"
       w="full"
-      backgroundColor="#23AAE3"
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -99,7 +98,7 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
-                              backgroundColor="icon.icon-orange"
+                              backgroundColor="icon-orange"
                             >
                               <Image
                                 src="/icons/star.svg"
@@ -124,7 +123,6 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
                         w="full"
                         h="full"
                         minH="50px"
-                        bg="white"
                       >
                         <Input
                           isRequired
@@ -133,6 +131,7 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
                           rounded="6px"
                           w="full"
                           h="full"
+                          bg="white"
                           minH="50px"
                           textStyle="placeholder"
                         />
@@ -231,4 +230,4 @@ const YourAccount: React.FC<YourAccountProps> = (props) => {
   );
 };
 
-export default YourAccount;
+export default Account;

@@ -28,7 +28,7 @@ interface FormValues {
 
 const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
   return (
-    <Container maxW="container.xl" backgroundColor="#23AAE3">
+    <Container maxW="container.xl">
       <HStack display="flex" alignItems="center" justifyContent="center">
         <Stack maxW="335px" w="full" gap="45px">
           <Text

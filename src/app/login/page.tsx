@@ -17,17 +17,23 @@ import {
 import { Formik, Form, Field } from "formik";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-interface SignInProps {}
+interface LogInProps {}
 
 interface FormValues {
   email: string;
   password: string;
 }
 
-const SignIn: React.FC<SignInProps> = (props) => {
+const LogIn: React.FC<LogInProps> = (props) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/account");
+  };
   return (
-    <Container maxW="container.xl" backgroundColor="#23AAE3">
+    <Container>
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -96,7 +102,6 @@ const SignIn: React.FC<SignInProps> = (props) => {
                         w="full"
                         h="full"
                         minH="50px"
-                        bg="white"
                       >
                         <Input
                           isRequired
@@ -106,6 +111,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
                           w="full"
                           h="full"
                           minH="50px"
+                          bg="white"
                           textStyle="placeholder"
                         />
                         <InputLeftElement
@@ -144,7 +150,6 @@ const SignIn: React.FC<SignInProps> = (props) => {
                         w="full"
                         h="full"
                         minH="50px"
-                        bg="white"
                         border="none"
                       >
                         <Input
@@ -152,6 +157,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
                           {...field}
                           placeholder="..........................."
                           rounded="6px"
+                          bg="white"
                           w="full"
                           h="full"
                           minH="50px"
@@ -200,6 +206,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
                   textAlign="center"
                   w="full"
                   bg="blue"
+                  onClick={handleClick}
                 >
                   Sign in with E-Mail
                 </Button>
@@ -210,7 +217,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
             By singning in you agree to our{" "}
             <Text as="span" textDecor="underline">
               Privacy
-            </Text>{" "}
+            </Text>
             &
             <Text as="span" textDecor="underline">
               Terms
@@ -231,4 +238,4 @@ const SignIn: React.FC<SignInProps> = (props) => {
   );
 };
 
-export default SignIn;
+export default LogIn;
