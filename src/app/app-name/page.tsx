@@ -41,30 +41,32 @@ const AppName: React.FC<AppNameProps> = (props) => {
           <Text textStyle="heading" mt="5" color="white">
             My App Name 1
           </Text>
-          <Text
-            textStyle="btntext"
-            lineHeight="22px"
-            letterSpacing="-0.16px"
-            color="white"
-          >
-            1. Download the kula app to your phone
-          </Text>
-          <Text
-            textStyle="btntext"
-            lineHeight="22px"
-            letterSpacing="-0.16px"
-            color="white"
-          >
-            2. Sign in with the same Account
-          </Text>
-          <Text
-            textStyle="btntext"
-            lineHeight="22px"
-            letterSpacing="-0.16px"
-            color="white"
-          >
-            3. Preview, edit & manage your App
-          </Text>
+          <Stack>
+            <Text
+              textStyle="btntext"
+              lineHeight="22px"
+              letterSpacing="-0.16px"
+              color="white"
+            >
+              1. Download the kula app to your phone
+            </Text>
+            <Text
+              textStyle="btntext"
+              lineHeight="22px"
+              letterSpacing="-0.16px"
+              color="white"
+            >
+              2. Sign in with the same Account
+            </Text>
+            <Text
+              textStyle="btntext"
+              lineHeight="22px"
+              letterSpacing="-0.16px"
+              color="white"
+            >
+              3. Preview, edit & manage your App
+            </Text>
+          </Stack>
 
           <Button
             mt="3"
