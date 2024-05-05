@@ -31,7 +31,13 @@ interface FormValues {
 const SignUp: React.FC<SignUpProps> = (props) => {
   return (
     <Container>
-      <Box minH="586px" maxW="435px" boxShadow={"md"} borderRadius={"xl"}>
+      <Box
+        minH="586px"
+        maxW="435px"
+        boxShadow={"md"}
+        borderRadius={"xl"}
+        bg="white"
+      >
         <Stack
           py="30px"
           px={{ base: "4px", sm: "10px", md: "20px", lg: "40px", xl: "50px" }}

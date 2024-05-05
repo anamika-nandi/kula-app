@@ -153,7 +153,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                     {({ field }: any) => (
                       <FormControl>
                         <FormLabel textStyle="formlabel">Description</FormLabel>
-                        <InputGroup w="full" h="ful" bg="white" border="none">
+                        <InputGroup w="full" h="ful" border="none">
                           <InputLeftElement
                             height="full"
                             pointerEvents="none"
@@ -174,6 +174,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             {...field}
                             placeholder="Tell me more about what your app should do, and what kind of features it should have"
                             rounded="6px"
+                            bg="white"
                             w="full"
                             textStyle="placeholder"
                           />

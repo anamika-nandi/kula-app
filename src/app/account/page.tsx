@@ -71,7 +71,9 @@ const Account: React.FC<AccountProps> = (props) => {
                 <Field name="name">
                   {({ field }: any) => (
                     <FormControl>
-                      <FormLabel textStyle="formlabel">Your Name</FormLabel>
+                      <FormLabel textStyle="formlabel" color="white">
+                        Your Name
+                      </FormLabel>
                       <InputGroup
                         display="flex"
                         alignItems="center"
@@ -86,6 +88,7 @@ const Account: React.FC<AccountProps> = (props) => {
                           rounded="6px"
                           minH="50px"
                           textStyle="placeholder"
+                          bg="white"
                         />
                         <InputLeftElement
                           height="full"
@@ -116,7 +119,9 @@ const Account: React.FC<AccountProps> = (props) => {
                 <Field name="email">
                   {({ field }: any) => (
                     <FormControl>
-                      <FormLabel textStyle="formlabel">E-Mail</FormLabel>
+                      <FormLabel textStyle="formlabel" color="white">
+                        E-Mail
+                      </FormLabel>
                       <InputGroup
                         display="flex"
                         alignItems="center"
@@ -171,7 +176,11 @@ const Account: React.FC<AccountProps> = (props) => {
             You’re signed in with [Apple / Google / E-Mail].
           </Text>
           <Text textStyle="heading2" color="white" textAlign="center">
-            [(If signed in with E-Mail) Reset my Password ].
+            [(If signed in with E-Mail)
+            <Text as="span" textDecor="underline" px="1">
+              Reset my Password
+            </Text>
+            ].
           </Text>
         </Box>
 
@@ -186,17 +195,6 @@ const Account: React.FC<AccountProps> = (props) => {
           Log Out
         </Button>
 
-        <Text textStyle="heading2" color="white" textAlign="center">
-          By singning in you agree to our{" "}
-          <Text as="span" textDecor="underline">
-            Privacy
-          </Text>{" "}
-          &
-          <Text as="span" textDecor="underline">
-            Terms
-          </Text>
-          .
-        </Text>
         <HStack>
           <HStack>
             <Text textStyle="heading2" color="white">
