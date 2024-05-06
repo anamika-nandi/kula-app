@@ -23,16 +23,14 @@ interface FormValues {
 
 const AppName: React.FC<AppNameProps> = (props) => {
   return (
-    <Grid>
+    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="flex-start"
-        mx="auto"
         gap="76px"
       >
         <Stack
-          maxW="335px"
-          w="full"
+          minW="335px"
           gap="0px"
           alignItems="center"
           justifyContent="center"
@@ -105,7 +103,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
         </Stack>
 
         <Stack
-          w="340px"
+          minW="340px"
           minH="547px"
           h="full"
           bg="lightblue"
@@ -148,7 +146,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
           </Text>
         </Stack>
       </Flex>
-    </Grid>
+    </Container>
   );
 };
 
