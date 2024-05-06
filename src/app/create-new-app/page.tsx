@@ -15,6 +15,8 @@ import {
   VStack,
   Textarea,
   Grid,
+  InputRightElement,
+  Flex,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { Formik, Form, Field } from "formik";
@@ -31,7 +33,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
   return (
     <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
       <HStack flexDirection={{ base: "column", md: "row" }}>
-        <Stack minW="335px" gap="3">
+        <Stack maxW="335px" w="full" gap="3">
           <Text textStyle="heading" color="white" textAlign="center" mb="5">
             Hi [Name]! What App do you want me to build?
           </Text>
@@ -116,7 +118,6 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                           border="none"
                         >
                           <Input
-                            isRequired
                             {...field}
                             placeholder="www.your-website.com"
                             rounded="6px"
@@ -149,6 +150,20 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                                   alt="round"
                                 />
                               </Box>
+                            }
+                          />
+                          <InputRightElement
+                            height="full"
+                            children={
+                              <Text
+                                fontSize="8px"
+                                lineHeight="10px"
+                                color="#D0D0D6"
+                                pt="6"
+                                pr="2"
+                              >
+                                Optional
+                              </Text>
                             }
                           />
                         </InputGroup>
