@@ -9,6 +9,7 @@ const colors = {
   orange: "#FF3A30",
 
   purple: "#AF53DE",
+  purpledark: "#AF52DE",
   "icon-orange": "#FF9500",
   "icon-gray": "#8E8E93",
   "icon-yellow": "#FFCC00",

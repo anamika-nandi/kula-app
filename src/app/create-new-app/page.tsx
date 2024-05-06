@@ -20,6 +20,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { Formik, Form, Field } from "formik";
+import { useRouter } from "next/navigation";
 
 interface CreateNewAppProps {}
 
@@ -30,8 +31,13 @@ interface FormValues {
 }
 
 const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
+  const router = useRouter();
+
+  const handleApp = () => {
+    router.push("/app-name");
+  };
   return (
-    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
+    <Container as={Grid} placeItems="center" maxW="920px" h="100dvh">
       <HStack flexDirection={{ base: "column", md: "row" }}>
         <Stack maxW="335px" w="full" gap="3">
           <Text textStyle="heading" color="white" textAlign="center" mb="5">
@@ -226,6 +232,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
             color="white"
             bg="blue"
             border="none"
+            onClick={handleApp}
           >
             Create my App
           </Button>

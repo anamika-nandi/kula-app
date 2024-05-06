@@ -1,3 +1,10 @@
+import { Box } from "@chakra-ui/react";
+import SignIn from "./sign-in-one/page";
+
 export default function Home() {
-  return <h1>ddddddddddddd</h1>;
+  return (
+    <Box>
+      <SignIn />
+    </Box>
+  );
 }

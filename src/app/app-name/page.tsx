@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 interface AppNameProps {}
 
 interface FormValues {
@@ -22,8 +23,12 @@ interface FormValues {
 }
 
 const AppName: React.FC<AppNameProps> = (props) => {
+  const router = useRouter();
+  const handleCard = () => {
+    router.push("/kula-card");
+  };
   return (
-    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
+    <Container as={Grid} placeItems="center" maxW="751px" h="100dvh">
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="flex-start"
@@ -113,23 +118,23 @@ const AppName: React.FC<AppNameProps> = (props) => {
           position="relative"
           // overflow="hidden"
         >
-          <Box position="absolute" bottom="-8px" right="-8px" zIndex={10}>
-            <Box
-              width={34}
-              height={34}
-              borderRadius={4}
+          <Box position="absolute" bottom="-16px" right="-10px" zIndex={10}>
+            <Button
+              width={38}
+              height={38}
+              // borderRadius="16px"
+              border="2px solid"
+              borderColor="purpledark"
               display="flex"
               alignItems="center"
               justifyContent="center"
-              backgroundColor="purple"
+              backgroundColor="white"
+              color="purpledark"
+              fontWeight="bold"
+              onClick={handleCard}
             >
-              <Image
-                src="/icons/email.svg"
-                height={17}
-                width={22}
-                alt="email"
-              />
-            </Box>
+              i
+            </Button>
           </Box>
           <Box position="absolute" top="0" w="full">
             <Progress
@@ -142,6 +147,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
           </Box>
           <Text
             mt="5"
+            mr="4"
             textAlign="end"
             color="white"
             fontWeight="light"

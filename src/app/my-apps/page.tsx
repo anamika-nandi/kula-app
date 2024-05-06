@@ -2,6 +2,7 @@
 import React from "react";
 import { Container, HStack, VStack, Button, Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface MyAppsProps {}
 
@@ -11,6 +12,10 @@ interface FormValues {
 }
 
 const MyApps: React.FC<MyAppsProps> = (props) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/app-name");
+  };
   return (
     <Container
       maxW="1920px"
@@ -50,6 +55,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
             color="white"
             bg="lightblue"
             border="none"
+            onClick={handleClick}
           >
             Preview on my Phone
           </Button>

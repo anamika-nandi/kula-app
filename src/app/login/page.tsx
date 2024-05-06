@@ -248,7 +248,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
             .
           </Text>
         </Stack>
-        <Box>
+        <Box minH={440} minW={578} width="full">
           <Image
             src="/img/kuala.png"
             height={440}
