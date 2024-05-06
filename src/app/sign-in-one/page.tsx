@@ -18,7 +18,13 @@ const SignIn: React.FC<SignInProps> = (props) => {
     router.push("/signup");
   };
   return (
-    <Container maxW="container.xl">
+    <Container
+      maxW="1920px"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}

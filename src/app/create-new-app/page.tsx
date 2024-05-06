@@ -28,7 +28,13 @@ interface FormValues {
 
 const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
   return (
-    <Container maxW="container.xl">
+    <Container
+      maxW="1920px"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -72,6 +78,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             w="full"
                             h="full"
                             minH="50px"
+                            border="1px solid #D0D0D6"
                             textStyle="placeholder"
                           />
                           <InputLeftElement
@@ -120,6 +127,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             bg="white"
                             w="full"
                             h="full"
+                            border="1px solid #D0D0D6"
                             minH="50px"
                             textStyle="placeholder"
                           />
@@ -176,6 +184,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             rounded="6px"
                             bg="white"
                             w="full"
+                            border="1px solid #D0D0D6"
                             textStyle="placeholder"
                           />
                         </InputGroup>
@@ -200,7 +209,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
           </Button>
         </Stack>
 
-        <Box>
+        <Box height={440} width={578}>
           <Image
             src="/img/kuala.png"
             height={440}

@@ -28,11 +28,11 @@ interface FormValues {
 const Account: React.FC<AccountProps> = (props) => {
   return (
     <Container
-      maxW="container.xl"
-      w="full"
+      maxW="1920px"
+      height="100vh"
       display="flex"
-      alignItems="center"
       justifyContent="center"
+      alignItems="center"
     >
       <Stack maxW="343px" w="full" alignItems="center" justifyContent="center">
         <Box bg="icon.icon-orange" height={140} width={140}>
@@ -89,6 +89,7 @@ const Account: React.FC<AccountProps> = (props) => {
                           minH="50px"
                           textStyle="placeholder"
                           bg="white"
+                          border="1px solid #D0D0D6"
                         />
                         <InputLeftElement
                           height="full"
@@ -138,6 +139,7 @@ const Account: React.FC<AccountProps> = (props) => {
                           h="full"
                           bg="white"
                           minH="50px"
+                          border="1px solid #D0D0D6"
                           textStyle="placeholder"
                         />
                         <InputLeftElement

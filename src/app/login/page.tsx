@@ -33,7 +33,13 @@ const LogIn: React.FC<LogInProps> = (props) => {
     router.push("/account");
   };
   return (
-    <Container>
+    <Container
+      maxW="1920px"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -112,6 +118,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                           h="full"
                           minH="50px"
                           bg="white"
+                          border="1px solid #D0D0D6"
                           textStyle="placeholder"
                         />
                         <InputLeftElement
@@ -161,6 +168,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                           w="full"
                           h="full"
                           minH="50px"
+                          border="1px solid #D0D0D6"
                           textStyle="placeholder"
                         />
                         <InputLeftElement

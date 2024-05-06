@@ -13,7 +13,13 @@ interface FormValues {
 
 const AppName: React.FC<AppNameProps> = (props) => {
   return (
-    <Container maxW="container.xl">
+    <Container
+      maxW="1920px"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}

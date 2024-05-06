@@ -30,7 +30,13 @@ interface FormValues {
 
 const SignUp: React.FC<SignUpProps> = (props) => {
   return (
-    <Container>
+    <Container
+      maxW="1920px"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Box
         minH="586px"
         maxW="435px"
@@ -85,6 +91,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           rounded="6px"
                           minH="50px"
                           textStyle="placeholder"
+                          border=" 1px solid #D0D0D6"
                         />
                         <InputLeftElement
                           height="full"
@@ -132,6 +139,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           w="full"
                           h="full"
                           minH="50px"
+                          border=" 1px solid #D0D0D6"
                           textStyle="placeholder"
                         />
                         <InputLeftElement
@@ -178,6 +186,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           rounded="6px"
                           w="full"
                           h="full"
+                          border=" 1px solid #D0D0D6"
                           minH="50px"
                           textStyle="placeholder"
                         />
@@ -225,6 +234,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           {...field}
                           placeholder="..........................."
                           rounded="6px"
+                          border=" 1px solid #D0D0D6"
                           w="full"
                           h="full"
                           minH="50px"

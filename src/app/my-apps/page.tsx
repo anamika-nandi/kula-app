@@ -12,7 +12,13 @@ interface FormValues {
 
 const MyApps: React.FC<MyAppsProps> = (props) => {
   return (
-    <Container maxW="container.xl" h="100%">
+    <Container
+      maxW="1920px"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}

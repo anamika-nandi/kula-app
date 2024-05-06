@@ -1,22 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Container,
-  HStack,
-  Stack,
-  Button,
-  Box,
-  Text,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  VStack,
-  Textarea,
-} from "@chakra-ui/react";
-import Image from "next/image";
-import { Formik, Form, Field } from "formik";
+import { Container, HStack, Stack, Button, Text } from "@chakra-ui/react";
 
 interface CreateNewAppProps {}
 
