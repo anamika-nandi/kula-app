@@ -20,6 +20,7 @@ const textStyles = {
     fontSize: ["20px", "24px", "28px"],
     lineHeight: ["24px", "28px", "32px"],
     fontWeight: "bold",
+    letterSpacing: "0px",
   },
   heading2: {
     fontFamily: "sf_text",

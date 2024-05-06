@@ -111,12 +111,45 @@ const AppName: React.FC<AppNameProps> = (props) => {
           px="11"
           borderRadius="16px"
           position="relative"
-          overflow="hidden"
+          // overflow="hidden"
         >
-          <Box position="absolute" top="0" w="full">
-            <Progress colorScheme="green" size="sm" value={20} w="full" />
+          <Box position="absolute" bottom="-8px" right="-8px" zIndex={10}>
+            <Box
+              width={34}
+              height={34}
+              borderRadius={4}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              backgroundColor="purple"
+            >
+              <Image
+                src="/icons/email.svg"
+                height={17}
+                width={22}
+                alt="email"
+              />
+            </Box>
           </Box>
-          <Box>
+          <Box position="absolute" top="0" w="full">
+            <Progress
+              colorScheme="green"
+              size="sm"
+              value={20}
+              w="full"
+              bg="bgblue"
+            />
+          </Box>
+          <Text
+            mt="5"
+            textAlign="end"
+            color="white"
+            fontWeight="light"
+            width="full"
+          >
+            STEP 1/5
+          </Text>
+          <Box mt="5">
             <Image
               src="/img/kuala_waking_up_transparent.png"
               height={192}
@@ -140,7 +173,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
             color="white"
             letterSpacing="-0.16px"
             textAlign="center"
-            mt="71px"
+            mt="10"
           >
             Your app is ready in 1-2 minutes
           </Text>

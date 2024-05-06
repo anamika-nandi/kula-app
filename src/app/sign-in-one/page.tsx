@@ -7,7 +7,7 @@ import {
   Button,
   Box,
   Text,
-  Flex,
+  Grid,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -26,13 +26,7 @@ const SignIn: React.FC<SignInProps> = (props) => {
     router.push("/signup");
   };
   return (
-    <Container
-      maxW="1920px"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}

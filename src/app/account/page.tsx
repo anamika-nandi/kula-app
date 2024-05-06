@@ -13,6 +13,7 @@ import {
   Text,
   InputLeftElement,
   InputGroup,
+  Grid,
 } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import Link from "next/link";
@@ -27,13 +28,7 @@ interface FormValues {
 
 const Account: React.FC<AccountProps> = (props) => {
   return (
-    <Container
-      maxW="1920px"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
       <Stack maxW="343px" w="full" alignItems="center" justifyContent="center">
         <Box bg="icon.icon-orange" height={140} width={140}>
           <Image
@@ -202,7 +197,7 @@ const Account: React.FC<AccountProps> = (props) => {
           Log Out
         </Button>
 
-        <HStack mt="8" alignItems="center" justifyContent="center" mb="18px">
+        <HStack mt="8" mb="18px" w="full" justifyContent="space-between">
           <HStack alignItems="center" justifyContent="space-between">
             <Text textStyle="heading2" color="white">
               User ID:
@@ -212,7 +207,6 @@ const Account: React.FC<AccountProps> = (props) => {
             </Text>
           </HStack>
           <Button
-            mt="3"
             textStyle="placeholder"
             textAlign="center"
             h="20px"

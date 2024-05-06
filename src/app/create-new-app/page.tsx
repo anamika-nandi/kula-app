@@ -14,6 +14,7 @@ import {
   InputLeftElement,
   VStack,
   Textarea,
+  Grid,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { Formik, Form, Field } from "formik";
@@ -28,20 +29,9 @@ interface FormValues {
 
 const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
   return (
-    <Container
-      maxW="1920px"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <HStack
-        display="flex"
-        flexDirection={{ base: "column", md: "row" }}
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Stack maxW="335px" w="full" gap="3">
+    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
+      <HStack flexDirection={{ base: "column", md: "row" }}>
+        <Stack minW="335px" gap="3">
           <Text textStyle="heading" color="white" textAlign="center" mb="5">
             Hi [Name]! What App do you want me to build?
           </Text>
@@ -226,7 +216,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
           </Button>
         </Stack>
 
-        <Box height={440} width={578}>
+        <Box minW={578} w="full" minH={440}>
           <Image
             src="/img/kuala.png"
             height={440}
