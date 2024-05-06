@@ -16,7 +16,7 @@ const textStyles = {
     color: "gray",
   },
   heading: {
-    fontFamily: "heading",
+    // fontFamily: "heading",
     fontSize: ["20px", "24px", "28px"],
     lineHeight: ["24px", "28px", "32px"],
     fontWeight: "bold",
@@ -28,7 +28,7 @@ const textStyles = {
     fontWeight: "medium",
   },
   heading3: {
-    fontFamily: "heading",
+    // fontFamily: "heading",
     fontSize: "30px",
     lineHeight: "40px",
     fontWeight: "bold",

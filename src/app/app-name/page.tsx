@@ -8,6 +8,8 @@ import {
   Box,
   Text,
   Progress,
+  Flex,
+  Grid,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
@@ -21,18 +23,12 @@ interface FormValues {
 
 const AppName: React.FC<AppNameProps> = (props) => {
   return (
-    <Container
-      maxW="1920px"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <HStack
-        display="flex"
+    <Grid>
+      <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="flex-start"
-        justifyContent="center"
+        mx="auto"
+        gap="76px"
       >
         <Stack
           maxW="335px"
@@ -107,52 +103,52 @@ const AppName: React.FC<AppNameProps> = (props) => {
             <Box> Copy Download Link</Box>
           </Button>
         </Stack>
-        <Stack>
-          <Box bg="red" position="absolute" top="0">
-            <Progress value={80} />
+
+        <Stack
+          w="340px"
+          minH="547px"
+          h="full"
+          bg="lightblue"
+          alignItems="center"
+          px="11"
+          borderRadius="16px"
+          position="relative"
+          overflow="hidden"
+        >
+          <Box position="absolute" top="0" w="full">
+            <Progress colorScheme="green" size="sm" value={20} w="full" />
           </Box>
-          <Stack
-            w="340px"
-            minH="547px"
-            h="full"
-            bg="lightblue"
-            alignItems="center"
-            px="46px"
-            borderRadius="16px"
-            position="relative"
+          <Box>
+            <Image
+              src="/img/kuala_waking_up_transparent.png"
+              height={192}
+              width={248}
+              alt="kuala-img"
+            />
+          </Box>
+          <Box mt="30px">
+            <Image
+              src="/icons/waking.svg"
+              height={60}
+              width={60}
+              alt="waking"
+            />
+          </Box>
+          <Text textStyle="heading3" color="white" textAlign="center" mt="3">
+            We’re waking our AI Assistant up…
+          </Text>
+          <Text
+            textStyle="btntext"
+            color="white"
+            letterSpacing="-0.16px"
+            textAlign="center"
+            mt="71px"
           >
-            <Box>
-              <Image
-                src="/img/kuala_waking_up_transparent.png"
-                height={192}
-                width={248}
-                alt="kuala-img"
-              />
-            </Box>
-            <Box mt="30px">
-              <Image
-                src="/icons/waking.svg"
-                height={60}
-                width={60}
-                alt="waking"
-              />
-            </Box>
-            <Text textStyle="heading3" color="white" textAlign="center" mt="3">
-              We’re waking our AI Assistant up…
-            </Text>
-            <Text
-              textStyle="btntext"
-              color="white"
-              letterSpacing="-0.16px"
-              textAlign="center"
-              mt="71px"
-            >
-              Your app is ready in 1-2 minutes
-            </Text>
-          </Stack>
+            Your app is ready in 1-2 minutes
+          </Text>
         </Stack>
-      </HStack>
-    </Container>
+      </Flex>
+    </Grid>
   );
 };
 
