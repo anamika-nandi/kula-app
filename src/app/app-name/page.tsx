@@ -1,6 +1,14 @@
 "use client";
 import React from "react";
-import { Container, HStack, Stack, Button, Box, Text } from "@chakra-ui/react";
+import {
+  Container,
+  HStack,
+  Stack,
+  Button,
+  Box,
+  Text,
+  Progress,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
 interface AppNameProps {}
@@ -73,7 +81,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
               3. Preview, edit & manage your App
             </Text>
           </Stack>
-          <Box my="5">
+          <Box my="5" borderRadius="8px">
             <Image
               src="/img/kuala_waking_up_transparent.png"
               height={260}
@@ -99,43 +107,49 @@ const AppName: React.FC<AppNameProps> = (props) => {
             <Box> Copy Download Link</Box>
           </Button>
         </Stack>
-
-        <Stack
-          w="340px"
-          minH="547px"
-          h="full"
-          bg="lightblue"
-          alignItems="center"
-          px="46px"
-        >
-          <Box>
-            <Image
-              src="/img/kuala_waking_up_transparent.png"
-              height={192}
-              width={248}
-              alt="kuala-img"
-            />
+        <Stack>
+          <Box bg="red" position="absolute" top="0">
+            <Progress value={80} />
           </Box>
-          <Box mt="30px">
-            <Image
-              src="/icons/waking.svg"
-              height={60}
-              width={60}
-              alt="waking"
-            />
-          </Box>
-          <Text textStyle="heading3" color="white" textAlign="center" mt="3">
-            We’re waking our AI Assistant up…
-          </Text>
-          <Text
-            textStyle="btntext"
-            color="white"
-            letterSpacing="-0.16px"
-            textAlign="center"
-            mt="71px"
+          <Stack
+            w="340px"
+            minH="547px"
+            h="full"
+            bg="lightblue"
+            alignItems="center"
+            px="46px"
+            borderRadius="16px"
+            position="relative"
           >
-            Your app is ready in 1-2 minutes
-          </Text>
+            <Box>
+              <Image
+                src="/img/kuala_waking_up_transparent.png"
+                height={192}
+                width={248}
+                alt="kuala-img"
+              />
+            </Box>
+            <Box mt="30px">
+              <Image
+                src="/icons/waking.svg"
+                height={60}
+                width={60}
+                alt="waking"
+              />
+            </Box>
+            <Text textStyle="heading3" color="white" textAlign="center" mt="3">
+              We’re waking our AI Assistant up…
+            </Text>
+            <Text
+              textStyle="btntext"
+              color="white"
+              letterSpacing="-0.16px"
+              textAlign="center"
+              mt="71px"
+            >
+              Your app is ready in 1-2 minutes
+            </Text>
+          </Stack>
         </Stack>
       </HStack>
     </Container>

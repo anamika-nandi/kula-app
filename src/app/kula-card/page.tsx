@@ -65,12 +65,12 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
         flexDirection={{ base: "column", md: "row" }}
         alignItems="flex-start"
         justifyContent="center"
+        gap="5"
       >
         {kulaCardData.map((item) => (
           <Stack
             w="340px"
-            minH="547px"
-            h="full"
+            h="547px"
             bg="lightblue"
             alignItems="center"
             gap="5"
@@ -84,10 +84,15 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
                 alt="kuala-img"
               />
             </Box>
-            <Box>
+            <Box mt="40px">
               <Image src={item.icon} height={46} width={46} alt="waking" />
             </Box>
-            <Text textStyle="heading3" color="white" textAlign="center">
+            <Text
+              textStyle="heading3"
+              color="white"
+              textAlign="center"
+              mt="19px"
+            >
               {item.describe}
             </Text>
             <Text
@@ -95,6 +100,7 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
               color="white"
               letterSpacing="-0.16px"
               textAlign="center"
+              mt="31px"
             >
               Your app is ready in 1-2 minutes
             </Text>
