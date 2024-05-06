@@ -89,12 +89,14 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           {...field}
                           placeholder="Name"
                           rounded="6px"
+                          pl="50px"
                           minH="50px"
                           textStyle="placeholder"
                           border=" 1px solid #D0D0D6"
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box
@@ -138,12 +140,14 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           rounded="6px"
                           w="full"
                           h="full"
+                          pl="50px"
                           minH="50px"
                           border=" 1px solid #D0D0D6"
                           textStyle="placeholder"
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box
@@ -184,6 +188,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           {...field}
                           placeholder="..........................."
                           rounded="6px"
+                          pl="50px"
                           w="full"
                           h="full"
                           border=" 1px solid #D0D0D6"
@@ -192,6 +197,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box
@@ -234,6 +240,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                           {...field}
                           placeholder="..........................."
                           rounded="6px"
+                          pl="50px"
                           border=" 1px solid #D0D0D6"
                           w="full"
                           h="full"
@@ -242,6 +249,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box

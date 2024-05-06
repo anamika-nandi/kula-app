@@ -4,14 +4,14 @@ const textStyles = {
   formlabel: {
     fontWeight: "semibold",
     fontSize: ["14px", "16px", "19px"],
-    fontFamily: "SF Pro Display, sans-serif",
+    fontFamily: "sf_display",
     lineHeight: ["15px", "17px", "19px"],
     color: "black",
   },
   placeholder: {
     fontWeight: "normal",
     fontSize: ["12px", "14px", "16px"],
-    fontFamily: "SF Pro Text, sans-serif",
+    fontFamily: "sf_text",
     lineHeight: ["15px", "17px", "19px"],
     color: "gray",
   },
@@ -22,7 +22,7 @@ const textStyles = {
     fontWeight: "bold",
   },
   heading2: {
-    fontFamily: "SF Pro Text",
+    fontFamily: "sf_text",
     fontSize: ["12px", "14px"],
     lineHeight: ["14px", "16px"],
     fontWeight: "medium",
@@ -35,7 +35,7 @@ const textStyles = {
     letterSpacing: "0.33px",
   },
   btntext: {
-    fontFamily: "SF Pro Display",
+    fontFamily: "sf_display",
     fontSize: ["12px", "14px", "16px"],
     lineHeight: ["17px", "19px"],
     fontWeight: "medium",
