@@ -1,6 +1,14 @@
 "use client";
 import React from "react";
-import { Container, HStack, Stack, Button, Box, Text } from "@chakra-ui/react";
+import {
+  Container,
+  HStack,
+  Stack,
+  Button,
+  Box,
+  Text,
+  Flex,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -41,8 +49,9 @@ const SignIn: React.FC<SignInProps> = (props) => {
               w="full"
               bg="black"
               border="none"
+              justifyContent="flex-start"
               leftIcon={
-                <Box>
+                <Box mr="60px">
                   <Image
                     src="/icons/apple.svg"
                     height={22}
@@ -57,18 +66,20 @@ const SignIn: React.FC<SignInProps> = (props) => {
 
             <Button
               textStyle="btntext"
-              textAlign="center"
               w="full"
               bg="white"
+              justifyContent="flex-start"
               color="black"
               border="none"
               leftIcon={
-                <Image
-                  src="/icons/google.svg"
-                  height={22}
-                  width={22}
-                  alt="google"
-                />
+                <Box mr="60px">
+                  <Image
+                    src="/icons/google.svg"
+                    height={22}
+                    width={22}
+                    alt="google"
+                  />
+                </Box>
               }
             >
               Sign up with Google

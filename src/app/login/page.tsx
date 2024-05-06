@@ -52,17 +52,19 @@ const LogIn: React.FC<LogInProps> = (props) => {
           </Text>
           <Button
             textStyle="btntext"
-            textAlign="center"
+            justifyContent="flex-start"
             w="full"
             bg="black"
             border="none"
             leftIcon={
-              <Image
-                src="/icons/apple.svg"
-                height={22}
-                width={18}
-                alt="apple"
-              />
+              <Box mr={12}>
+                <Image
+                  src="/icons/apple.svg"
+                  height={22}
+                  width={18}
+                  alt="apple"
+                />
+              </Box>
             }
           >
             Sign in with Apple
@@ -71,15 +73,18 @@ const LogIn: React.FC<LogInProps> = (props) => {
             textStyle="btntext"
             w="full"
             bg="white"
+            justifyContent="flex-start"
             color="black"
             border="none"
             leftIcon={
-              <Image
-                src="/icons/google.svg"
-                height={22}
-                width={22}
-                alt="google"
-              />
+              <Box mr={12}>
+                <Image
+                  src="/icons/google.svg"
+                  height={22}
+                  width={22}
+                  alt="google"
+                />
+              </Box>
             }
           >
             Sign in with Google
@@ -101,7 +106,9 @@ const LogIn: React.FC<LogInProps> = (props) => {
                 <Field name="email">
                   {({ field }: any) => (
                     <FormControl>
-                      <FormLabel textStyle="formlabel">E-Mail</FormLabel>
+                      <FormLabel textStyle="formlabel" color="white">
+                        E-Mail
+                      </FormLabel>
                       <InputGroup
                         display="flex"
                         alignItems="center"
@@ -116,6 +123,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                           rounded="6px"
                           w="full"
                           h="full"
+                          pl="50px"
                           minH="50px"
                           bg="white"
                           border="1px solid #D0D0D6"
@@ -123,6 +131,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box
@@ -150,7 +159,9 @@ const LogIn: React.FC<LogInProps> = (props) => {
                 <Field name="password">
                   {({ field }: any) => (
                     <FormControl>
-                      <FormLabel textStyle="formlabel">Password</FormLabel>
+                      <FormLabel textStyle="formlabel" color="white">
+                        Password
+                      </FormLabel>
                       <InputGroup
                         display="flex"
                         alignItems="center"
@@ -164,6 +175,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                           {...field}
                           placeholder="..........................."
                           rounded="6px"
+                          pl="50px"
                           bg="white"
                           w="full"
                           h="full"
@@ -174,6 +186,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                         <InputLeftElement
                           height="full"
                           pointerEvents="none"
+                          mx={2}
                           children={
                             <Box
                               width={34}
@@ -199,6 +212,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                         textAlign="end"
                         textStyle="heading2"
                         color="white"
+                        mt={3}
                       >
                         Can't remeber your password?
                       </Text>
@@ -215,13 +229,14 @@ const LogIn: React.FC<LogInProps> = (props) => {
                   w="full"
                   bg="blue"
                   onClick={handleClick}
+                  mt={5}
                 >
                   Sign in with E-Mail
                 </Button>
               </VStack>
             </Form>
           </Formik>
-          <Text textStyle="heading2" color="white" textAlign="center">
+          <Text textStyle="heading2" color="white" textAlign="center" mt={4}>
             By singning in you agree to our{" "}
             <Text as="span" textDecor="underline">
               Privacy

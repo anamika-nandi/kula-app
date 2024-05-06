@@ -2,7 +2,7 @@
 import React from "react";
 import { Container, HStack, Stack, Button, Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
-
+import { FaRegCopy } from "react-icons/fa";
 interface AppNameProps {}
 
 interface FormValues {
@@ -29,7 +29,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
         <Stack
           maxW="335px"
           w="full"
-          gap="3"
+          gap="0px"
           alignItems="center"
           justifyContent="center"
         >
@@ -47,7 +47,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
           <Text textStyle="heading" mt="5" color="white">
             My App Name 1
           </Text>
-          <Stack>
+          <Stack mt="5">
             <Text
               textStyle="btntext"
               lineHeight="22px"
@@ -73,19 +73,30 @@ const AppName: React.FC<AppNameProps> = (props) => {
               3. Preview, edit & manage your App
             </Text>
           </Stack>
-
+          <Box my="5">
+            <Image
+              src="/img/kuala_waking_up_transparent.png"
+              height={260}
+              width={260}
+              alt="kuala-img"
+            />
+          </Box>
           <Button
-            mt="3"
             textStyle="heading2"
             textAlign="center"
             px="8px"
-            py="4px"
+            h="25px"
             borderRadius={8}
             color="white"
             bg="lightblue"
             border="none"
+            leftIcon={
+              <Box>
+                <FaRegCopy />
+              </Box>
+            }
           >
-            Copy Download Link
+            <Box> Copy Download Link</Box>
           </Button>
         </Stack>
 
@@ -100,12 +111,12 @@ const AppName: React.FC<AppNameProps> = (props) => {
           <Box>
             <Image
               src="/img/kuala_waking_up_transparent.png"
-              height={440}
-              width={578}
+              height={192}
+              width={248}
               alt="kuala-img"
             />
           </Box>
-          <Box>
+          <Box mt="30px">
             <Image
               src="/icons/waking.svg"
               height={60}
@@ -113,7 +124,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
               alt="waking"
             />
           </Box>
-          <Text textStyle="heading3" color="white" textAlign="center">
+          <Text textStyle="heading3" color="white" textAlign="center" mt="3">
             We’re waking our AI Assistant up…
           </Text>
           <Text
@@ -121,6 +132,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
             color="white"
             letterSpacing="-0.16px"
             textAlign="center"
+            mt="71px"
           >
             Your app is ready in 1-2 minutes
           </Text>

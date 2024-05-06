@@ -61,7 +61,9 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                   <Field name="name">
                     {({ field }: any) => (
                       <FormControl>
-                        <FormLabel textStyle="formlabel">App Name</FormLabel>
+                        <FormLabel textStyle="formlabel" color="white">
+                          App Name
+                        </FormLabel>
                         <InputGroup
                           display="flex"
                           alignItems="center"
@@ -77,12 +79,14 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             bg="white"
                             w="full"
                             h="full"
+                            pl="50px"
                             minH="50px"
                             border="1px solid #D0D0D6"
                             textStyle="placeholder"
                           />
                           <InputLeftElement
                             height="full"
+                            mx={2}
                             pointerEvents="none"
                             children={
                               <Box
@@ -95,10 +99,10 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                                 backgroundColor="yellow"
                               >
                                 <Image
-                                  src="/icons/email.svg"
+                                  src="/icons/star.svg"
                                   height={17}
                                   width={22}
-                                  alt="email"
+                                  alt="star"
                                 />
                               </Box>
                             }
@@ -110,7 +114,9 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                   <Field name="websiteName">
                     {({ field }: any) => (
                       <FormControl>
-                        <FormLabel textStyle="formlabel">Website</FormLabel>
+                        <FormLabel textStyle="formlabel" color="white">
+                          Website
+                        </FormLabel>
                         <InputGroup
                           display="flex"
                           alignItems="center"
@@ -124,6 +130,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             {...field}
                             placeholder="www.your-website.com"
                             rounded="6px"
+                            pl="50px"
                             bg="white"
                             w="full"
                             h="full"
@@ -133,6 +140,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                           />
                           <InputLeftElement
                             height="full"
+                            mx={2}
                             pointerEvents="none"
                             children={
                               <Box
@@ -145,10 +153,10 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                                 backgroundColor="purple"
                               >
                                 <Image
-                                  src="/icons/password.svg"
-                                  height={19}
-                                  width={13}
-                                  alt="password"
+                                  src="/icons/round.svg"
+                                  height={22}
+                                  width={22}
+                                  alt="round"
                                 />
                               </Box>
                             }
@@ -160,10 +168,16 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                   <Field name="descriptionText">
                     {({ field }: any) => (
                       <FormControl>
-                        <FormLabel textStyle="formlabel">Description</FormLabel>
+                        <FormLabel textStyle="formlabel" color="white">
+                          Description
+                        </FormLabel>
                         <InputGroup w="full" h="ful" border="none">
                           <InputLeftElement
+                            mx={2}
+                            mt={3}
                             height="full"
+                            display="flex"
+                            alignItems="flex-start"
                             pointerEvents="none"
                             children={
                               <Box>
@@ -182,6 +196,9 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             {...field}
                             placeholder="Tell me more about what your app should do, and what kind of features it should have"
                             rounded="6px"
+                            pl="50px"
+                            justifyContent="flex-start"
+                            alignItems="flex-start"
                             bg="white"
                             w="full"
                             border="1px solid #D0D0D6"

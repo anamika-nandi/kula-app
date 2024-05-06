@@ -48,7 +48,7 @@ const Account: React.FC<AccountProps> = (props) => {
           textStyle="placeholder"
           textAlign="center"
           px="7px"
-          py="3px"
+          h="25px"
           borderRadius={8}
           color="white"
           bg="lightblue"
@@ -72,7 +72,7 @@ const Account: React.FC<AccountProps> = (props) => {
                   {({ field }: any) => (
                     <FormControl>
                       <FormLabel textStyle="formlabel" color="white">
-                        Your Name
+                        Name
                       </FormLabel>
                       <InputGroup
                         display="flex"
@@ -87,12 +87,14 @@ const Account: React.FC<AccountProps> = (props) => {
                           placeholder="Micheal Dundee"
                           rounded="6px"
                           minH="50px"
+                          pl="50px"
                           textStyle="placeholder"
                           bg="white"
                           border="1px solid #D0D0D6"
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box
@@ -138,12 +140,14 @@ const Account: React.FC<AccountProps> = (props) => {
                           w="full"
                           h="full"
                           bg="white"
+                          pl="50px"
                           minH="50px"
                           border="1px solid #D0D0D6"
                           textStyle="placeholder"
                         />
                         <InputLeftElement
                           height="full"
+                          mx={2}
                           pointerEvents="none"
                           children={
                             <Box
@@ -171,13 +175,13 @@ const Account: React.FC<AccountProps> = (props) => {
               </VStack>
             </Form>
           </Formik>
-          <Text textStyle="heading2" color="white" textAlign="center">
+          <Text textStyle="heading2" color="white" textAlign="center" mt="3">
             You can’t change your E-Mail currently.
           </Text>
-          <Text textStyle="heading2" color="white" textAlign="center">
+          <Text textStyle="heading2" color="white" textAlign="center" mt="10px">
             You’re signed in with [Apple / Google / E-Mail].
           </Text>
-          <Text textStyle="heading2" color="white" textAlign="center">
+          <Text textStyle="heading2" color="white" textAlign="center" mt="3">
             [(If signed in with E-Mail)
             <Text as="span" textDecor="underline" px="1">
               Reset my Password
@@ -193,12 +197,13 @@ const Account: React.FC<AccountProps> = (props) => {
           color="white"
           bg="orange"
           border="none"
+          mt="5"
         >
           Log Out
         </Button>
 
-        <HStack>
-          <HStack>
+        <HStack mt="8" alignItems="center" justifyContent="center" mb="18px">
+          <HStack alignItems="center" justifyContent="space-between">
             <Text textStyle="heading2" color="white">
               User ID:
             </Text>

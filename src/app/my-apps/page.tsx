@@ -45,7 +45,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
             textStyle="btntext"
             textAlign="center"
             px="7px"
-            py="3px"
+            height="25px"
             borderRadius={8}
             color="white"
             bg="lightblue"
@@ -59,6 +59,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
             textAlign="center"
             px="7px"
             py="3px"
+            height="25px"
             borderRadius={8}
             color="white"
             bg="lightblue"
