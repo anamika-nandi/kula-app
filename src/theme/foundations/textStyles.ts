@@ -14,7 +14,6 @@ const textStyles = {
     color: "gray",
   },
   heading: {
-    // fontFamily: "heading",
     fontSize: ["20px", "24px", "28px"],
     lineHeight: ["24px", "28px", "32px"],
     fontWeight: "bold",

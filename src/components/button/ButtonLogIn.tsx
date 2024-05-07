@@ -16,16 +16,18 @@ export function ButtonLogIn(props: ButtonLogInProps) {
   };
   return (
     <Button
-      width={268}
       h={58}
-      border="2px solid light_gray"
+      border="2px solid "
+      borderColor="white"
       borderRadius="8px"
-      bg="white"
+      bg="transparent"
       pl="3"
       onClick={handleLoginClick}
+      gap="4"
+      display="flex"
     >
       <Box
-        width={38}
+        minW={38}
         height={38}
         borderRadius={4}
         display="flex"
@@ -42,12 +44,14 @@ export function ButtonLogIn(props: ButtonLogInProps) {
           style={{ color: "blue" }}
         />
       </Box>
-      <Stack gap="0" color="black">
+      <Stack gap="0" color="white">
         <Text textStyle="heading2">Already have an Account?</Text>
-        <Text textStyle="heading4">Login here</Text>
+        <Text fontWeight="bold" align="start" textStyle="heading4">
+          Login here
+        </Text>
       </Stack>
-      <Box color="light_gray" width="33px" height="22px">
-        <ChevronRightIcon width="33px" height="22px" />
+      <Box color="white" width="33px" height="22px">
+        <ChevronRightIcon width="33px" height="25px" />
       </Box>
     </Button>
   );

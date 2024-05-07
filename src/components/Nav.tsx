@@ -4,6 +4,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
+  HStack,
   Stack,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -30,9 +31,9 @@ export function Nav({ breadcrumb, page }: NavProps) {
   const renderButton = () => {
     switch (page) {
       case "login":
-        return <ButtonLogIn />;
-      case "signup":
         return <ButtonSignUp />;
+      case "signup":
+        return <ButtonLogIn />;
       case "apps":
         return <ButtonApps />;
       case "accounts":
@@ -45,7 +46,7 @@ export function Nav({ breadcrumb, page }: NavProps) {
 
   return (
     <nav>
-      <Stack flexDir="row" alignItems="center" justifyContent="space-between">
+      <HStack justifyContent="space-between">
         <Image
           src="/img/kula_logo.png"
           width={177}
@@ -64,6 +65,7 @@ export function Nav({ breadcrumb, page }: NavProps) {
                 href={item.href}
                 passHref
                 color="white"
+                textStyle="heading"
               >
                 {item.label}
               </BreadcrumbLink>
@@ -74,7 +76,7 @@ export function Nav({ breadcrumb, page }: NavProps) {
         <Box my="5" mr="17px">
           {renderButton()}
         </Box>
-      </Stack>
+      </HStack>
     </nav>
   );
 }
