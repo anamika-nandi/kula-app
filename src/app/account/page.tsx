@@ -5,19 +5,15 @@ import {
   HStack,
   Stack,
   VStack,
-  FormControl,
-  FormLabel,
-  Input,
   Button,
   Box,
   Text,
-  InputLeftElement,
-  InputGroup,
   Grid,
 } from "@chakra-ui/react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import Link from "next/link";
 import Image from "next/image";
+import IconInput from "@/components/input/IconInput";
 
 interface AccountProps {}
 
@@ -63,110 +59,24 @@ const Account: React.FC<AccountProps> = (props) => {
           >
             <Form>
               <VStack spacing="3" mt="4" width="343px">
-                <Field name="name">
-                  {({ field }: any) => (
-                    <FormControl>
-                      <FormLabel textStyle="formlabel" color="white">
-                        Name
-                      </FormLabel>
-                      <InputGroup
-                        display="flex"
-                        alignItems="center"
-                        w="full"
-                        h="full"
-                        minH="50px"
-                      >
-                        <Input
-                          isRequired
-                          {...field}
-                          placeholder="Micheal Dundee"
-                          rounded="6px"
-                          minH="50px"
-                          pl="50px"
-                          textStyle="placeholder"
-                          bg="white"
-                          border="1px solid #D0D0D6"
-                        />
-                        <InputLeftElement
-                          height="full"
-                          mx={2}
-                          pointerEvents="none"
-                          children={
-                            <Box
-                              width={34}
-                              height={34}
-                              borderRadius={4}
-                              display="flex"
-                              alignItems="center"
-                              justifyContent="center"
-                              backgroundColor="orange"
-                            >
-                              <Image
-                                src="/icons/star.svg"
-                                height={23}
-                                width={23}
-                                alt="name"
-                              />
-                            </Box>
-                          }
-                        />
-                      </InputGroup>
-                    </FormControl>
-                  )}
-                </Field>
-                <Field name="email">
-                  {({ field }: any) => (
-                    <FormControl>
-                      <FormLabel textStyle="formlabel" color="white">
-                        E-Mail
-                      </FormLabel>
-                      <InputGroup
-                        display="flex"
-                        alignItems="center"
-                        w="full"
-                        h="full"
-                        minH="50px"
-                      >
-                        <Input
-                          isRequired
-                          {...field}
-                          placeholder="m.dundee@crocodile.au"
-                          rounded="6px"
-                          w="full"
-                          h="full"
-                          bg="white"
-                          pl="50px"
-                          minH="50px"
-                          border="1px solid #D0D0D6"
-                          textStyle="placeholder"
-                        />
-                        <InputLeftElement
-                          height="full"
-                          mx={2}
-                          pointerEvents="none"
-                          children={
-                            <Box
-                              width={34}
-                              height={34}
-                              borderRadius={4}
-                              display="flex"
-                              alignItems="center"
-                              justifyContent="center"
-                              backgroundColor="purple"
-                            >
-                              <Image
-                                src="/icons/round.svg"
-                                height={17}
-                                width={22}
-                                alt="email"
-                              />
-                            </Box>
-                          }
-                        />
-                      </InputGroup>
-                    </FormControl>
-                  )}
-                </Field>
+                <IconInput
+                  name="name"
+                  placeholder="Name"
+                  label="Your Name"
+                  iconSrc="/icons/star.svg"
+                  iconBgColor="orange"
+                  labelProps={{ color: "white" }}
+                />
+
+                <IconInput
+                  name="email"
+                  placeholder="name@gmail.com"
+                  label="E-Mail"
+                  iconSrc="/icons/round.svg"
+                  iconBgColor="purple"
+                  inputType="email"
+                  labelProps={{ color: "white" }}
+                />
               </VStack>
             </Form>
           </Formik>

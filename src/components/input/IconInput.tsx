@@ -6,6 +6,8 @@ import {
   InputLeftElement,
   Box,
   FormLabelProps,
+  InputRightElement,
+  Text,
 } from "@chakra-ui/react";
 import { Field } from "formik";
 import Image from "next/image";
@@ -20,6 +22,7 @@ interface IconInputProps {
   iconWidth?: number;
   inputType?: string;
   labelProps?: FormLabelProps;
+  isOptional?: boolean;
 }
 
 const IconInput: React.FC<IconInputProps> = ({
@@ -32,6 +35,7 @@ const IconInput: React.FC<IconInputProps> = ({
   iconWidth,
   inputType,
   labelProps,
+  isOptional = false,
 }) => (
   <Field name={name}>
     {({ field }: any) => (
@@ -57,8 +61,9 @@ const IconInput: React.FC<IconInputProps> = ({
             placeholder={placeholder}
             rounded="6px"
             pl="50px"
-            borderRadius="6px"
             textStyle="placeholder"
+            borderRadius="6px"
+            color="black"
             _placeholder={{
               textStyle: "placeholder",
             }}
@@ -88,6 +93,19 @@ const IconInput: React.FC<IconInputProps> = ({
               />
             </Box>
           </InputLeftElement>
+          {isOptional && (
+            <InputRightElement height="full">
+              <Text
+                fontSize="8px"
+                lineHeight="10px"
+                color="#D0D0D6"
+                pt="6"
+                pr="2"
+              >
+                Optional
+              </Text>
+            </InputRightElement>
+          )}
         </InputGroup>
       </FormControl>
     )}

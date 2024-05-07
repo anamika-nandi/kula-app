@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Container,
@@ -9,7 +10,6 @@ import {
   Progress,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { describe } from "node:test";
 
 interface KulaCardProps {}
 
@@ -21,8 +21,6 @@ const kulaCardData = [
     describe: "We’re waking our AI Assistant up…",
     width: "248",
     height: "192",
-    rate: 20,
-    step: "1 / 5",
   },
   {
     id: "2",
@@ -31,8 +29,6 @@ const kulaCardData = [
     describe: "Our AI Assistant is setting up your App now…",
     width: "167",
     height: "190",
-    rate: 40,
-    step: "2 / 5",
   },
   {
     id: "3",
@@ -41,44 +37,43 @@ const kulaCardData = [
     describe: "Our AI Assistant is filling in some Images…",
     width: "167",
     height: "190",
-    rate: 60,
-    step: "3 / 5",
   },
-  // {
-  //   id: "4",
-  //   img: "/img/kuala_feature_summoning.png",
-  //   icon: "/icons/waking4.svg",
-  //   describe: "Our AI Assistant is adding [Feature Type (plural)]…",
-  //   width: "210",
-  //   height: "190",
-  //   rate: 80,
-  //   Step: 4 / 5,
-  // },
-  // {
-  //   id: "5",
-  //   img: "/img/kuala_design.png",
-  //   icon: "/icons/waking5.svg",
-  //   describe: "Our AI Assistant is choosing a perfect design…",
-  //   width: "167",
-  //   height: "190",
-  //   rate: 100,
-  //   step: 5 / 5,
-  // },
-  // {
-  //   id: "6",
-  //   img: "/img/kuala_setting_up.png",
-  //   icon: "/icons/waking6.svg",
-  //   describe: "Your App is ready to be previewed",
-  //   width: "167",
-  //   height: "190",
-  //   rate: 0,
-  //   step: 0,
-  // },
+  {
+    id: "4",
+    img: "/img/kuala_feature_summoning.png",
+    icon: "/icons/waking4.svg",
+    describe: "Our AI Assistant is adding [Feature Type (plural)]…",
+    width: "210",
+    height: "190",
+  },
+  {
+    id: "5",
+    img: "/img/kuala_design.png",
+    icon: "/icons/waking5.svg",
+    describe: "Our AI Assistant is choosing a perfect design…",
+    width: "167",
+    height: "190",
+  },
+  {
+    id: "6",
+    img: "/img/kuala_setting_up.png",
+    icon: "/icons/waking6.svg",
+    describe: "Your App is ready to be previewed",
+    width: "167",
+    height: "190",
+  },
 ];
 
 const KulaCard: React.FC<KulaCardProps> = (props) => {
   return (
-    <Container as={Grid} placeItems="center" maxW="1080px" h="100dvh">
+    <Container
+      maxW="full"
+      overflow="hidden"
+      overflowX="auto"
+      as={Grid}
+      placeItems="center"
+      h="90vh"
+    >
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -86,7 +81,7 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
         justifyContent="center"
         gap="5"
       >
-        {kulaCardData.map((item) => (
+        {kulaCardData.map((item, i) => (
           <Stack
             w="340px"
             h="570px"
@@ -110,15 +105,13 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
               <Text as="span" pr="2">
                 STEP
               </Text>
-              {item.step}
+              {i + 1 + "/" + kulaCardData.length}
             </Text>
             <Box position="absolute" top="0" w="full">
               <Progress
-                colorScheme="green"
-                size="sm"
-                value={item.rate}
+                size="xs"
+                value={(100 / kulaCardData.length) * (1 + i)}
                 w="full"
-                bg="kula_blue"
               />
             </Box>
             <Box minH="192px">

@@ -35,6 +35,13 @@ const theme = extendTheme(
         },
         variants: {},
       },
+      Progress: {
+        baseStyle: {
+          filledTrack: {
+            bg: "blue",
+          },
+        },
+      },
     },
 
     config: {

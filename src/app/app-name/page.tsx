@@ -1,15 +1,13 @@
 "use client";
 import React from "react";
 import {
-  Container,
-  HStack,
   Stack,
   Button,
   Box,
   Text,
   Progress,
   Flex,
-  Grid,
+  Center,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
@@ -28,7 +26,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
     router.push("/kula-card");
   };
   return (
-    <Container as={Grid} placeItems="center" maxW="751px" h="100dvh">
+    <Center h="100vh">
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="flex-start"
@@ -54,7 +52,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
           <Text textStyle="heading" mt="5" color="white">
             My App Name 1
           </Text>
-          <Stack mt="5">
+          <Stack mt="5" spacing={0}>
             <Text
               textStyle="btntext"
               lineHeight="22px"
@@ -107,85 +105,86 @@ const AppName: React.FC<AppNameProps> = (props) => {
           </Button>
         </Stack>
 
-        <Stack
-          minW="340px"
-          minH="547px"
-          h="full"
-          bg="light_blue"
-          alignItems="center"
-          px="11"
-          borderRadius="16px"
-          position="relative"
-          // overflow="hidden"
-        >
+        <Box pos="relative">
           <Box position="absolute" bottom="-16px" right="-10px" zIndex={10}>
             <Button
               width={38}
               height={38}
-              // borderRadius="16px"
               border="2px solid"
-              borderColor="purpledark"
+              borderColor="purple"
               display="flex"
               alignItems="center"
               justifyContent="center"
               backgroundColor="white"
-              color="purpledark"
+              color="purple"
               fontWeight="bold"
               onClick={handleCard}
             >
               i
             </Button>
           </Box>
-          <Box position="absolute" top="0" w="full">
-            <Progress
-              colorScheme="green"
-              size="sm"
-              value={20}
-              w="full"
-              bg="kula_blue"
-            />
-          </Box>
-          <Text
-            mt="5"
-            mr="4"
-            textAlign="end"
-            color="white"
-            fontWeight="light"
-            width="full"
+          <Stack
+            maxW="340px"
+            minH="547px"
+            h="full"
+            bg="light_blue"
+            alignItems="center"
+            px="11"
+            borderRadius="16px"
+            position="relative"
+            overflow="hidden"
           >
-            STEP 1/5
-          </Text>
-          <Box mt="5">
-            <Image
-              src="/img/kuala_waking_up_transparent.png"
-              height={192}
-              width={248}
-              alt="kuala-img"
-            />
-          </Box>
-          <Box mt="30px">
-            <Image
-              src="/icons/waking.svg"
-              height={60}
-              width={60}
-              alt="waking"
-            />
-          </Box>
-          <Text textStyle="heading3" color="white" textAlign="center" mt="3">
-            We’re waking our AI Assistant up…
-          </Text>
-          <Text
-            textStyle="btntext"
-            color="white"
-            letterSpacing="-0.16px"
-            textAlign="center"
-            mt="10"
-          >
-            Your app is ready in 1-2 minutes
-          </Text>
-        </Stack>
+            <Box position="absolute" top="0" w="full">
+              <Progress
+                colorScheme="blue"
+                size="xs"
+                value={50}
+                w="full"
+                bg="blue"
+              />
+            </Box>
+            <Text
+              mt="5"
+              mr="4"
+              textAlign="end"
+              color="white"
+              fontWeight="light"
+              width="full"
+            >
+              STEP 1/5
+            </Text>
+            <Box mt="5">
+              <Image
+                src="/img/kuala_waking_up_transparent.png"
+                height={192}
+                width={248}
+                alt="kuala-img"
+              />
+            </Box>
+            <Box mt="30px">
+              <Image
+                src="/icons/waking.svg"
+                height={60}
+                width={60}
+                alt="waking"
+              />
+            </Box>
+            <Text textStyle="heading3" color="white" textAlign="center" mt="3">
+              We’re waking our AI Assistant up…
+            </Text>
+            <Text
+              textStyle="btntext"
+              color="white"
+              letterSpacing="-0.16px"
+              textAlign="center"
+              mt="10"
+            >
+              Your app is ready in 1-2 minutes
+            </Text>
+          </Stack>
+        </Box>
       </Flex>
-    </Container>
+    </Center>
   );
 };
 

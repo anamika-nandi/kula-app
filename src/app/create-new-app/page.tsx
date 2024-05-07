@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import {
-  Container,
   HStack,
   Stack,
   Button,
@@ -9,18 +8,16 @@ import {
   Text,
   FormControl,
   FormLabel,
-  Input,
   InputGroup,
   InputLeftElement,
   VStack,
   Textarea,
-  Grid,
-  InputRightElement,
-  Flex,
+  Center,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { Formik, Form, Field } from "formik";
 import { useRouter } from "next/navigation";
+import IconInput from "@/components/input/IconInput";
 
 interface CreateNewAppProps {}
 
@@ -37,10 +34,10 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
     router.push("/app-name");
   };
   return (
-    <Container as={Grid} placeItems="center" maxW="920px" h="100dvh">
+    <Center h="100vh">
       <HStack flexDirection={{ base: "column", md: "row" }}>
         <Stack maxW="335px" w="full" gap="3">
-          <Text textStyle="heading" color="white" textAlign="center" mb="5">
+          <Text textStyle="heading" color="white" textAlign="center">
             Hi [Name]! What App do you want me to build?
           </Text>
           <Stack>
@@ -56,126 +53,31 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
             >
               <Form>
                 <VStack spacing="3" mt="4">
-                  <Field name="name">
-                    {({ field }: any) => (
-                      <FormControl>
-                        <FormLabel textStyle="formlabel" color="white">
-                          App Name
-                        </FormLabel>
-                        <InputGroup
-                          display="flex"
-                          alignItems="center"
-                          w="full"
-                          h="full"
-                          minH="50px"
-                        >
-                          <Input
-                            isRequired
-                            {...field}
-                            placeholder="Your Awesome App"
-                            rounded="6px"
-                            bg="white"
-                            w="full"
-                            h="full"
-                            pl="50px"
-                            minH="50px"
-                            border="1px solid #D0D0D6"
-                            textStyle="placeholder"
-                          />
-                          <InputLeftElement
-                            height="full"
-                            mx={2}
-                            pointerEvents="none"
-                            children={
-                              <Box
-                                width={34}
-                                height={34}
-                                borderRadius={4}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                backgroundColor="yellow"
-                              >
-                                <Image
-                                  src="/icons/star.svg"
-                                  height={17}
-                                  width={22}
-                                  alt="star"
-                                />
-                              </Box>
-                            }
-                          />
-                        </InputGroup>
-                      </FormControl>
-                    )}
-                  </Field>
-                  <Field name="websiteName">
-                    {({ field }: any) => (
-                      <FormControl>
-                        <FormLabel textStyle="formlabel" color="white">
-                          Website
-                        </FormLabel>
-                        <InputGroup
-                          display="flex"
-                          alignItems="center"
-                          w="full"
-                          h="full"
-                          minH="50px"
-                          border="none"
-                        >
-                          <Input
-                            {...field}
-                            placeholder="www.your-website.com"
-                            rounded="6px"
-                            pl="50px"
-                            bg="white"
-                            w="full"
-                            h="full"
-                            border="1px solid #D0D0D6"
-                            minH="50px"
-                            textStyle="placeholder"
-                          />
-                          <InputLeftElement
-                            height="full"
-                            mx={2}
-                            pointerEvents="none"
-                            children={
-                              <Box
-                                width={34}
-                                height={34}
-                                borderRadius={4}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                backgroundColor="purple"
-                              >
-                                <Image
-                                  src="/icons/round.svg"
-                                  height={22}
-                                  width={22}
-                                  alt="round"
-                                />
-                              </Box>
-                            }
-                          />
-                          <InputRightElement
-                            height="full"
-                            children={
-                              <Text
-                                fontSize="8px"
-                                lineHeight="10px"
-                                color="#D0D0D6"
-                                pt="6"
-                                pr="2"
-                              >
-                                Optional
-                              </Text>
-                            }
-                          />
-                        </InputGroup>
-                      </FormControl>
-                    )}
-                  </Field>
+                  <IconInput
+                    name="name"
+                    placeholder="Your Awesome App"
+                    label="App Name"
+                    iconSrc="/icons/email.svg"
+                    iconBgColor="purple"
+                    inputType="email"
+                    labelProps={{
+                      color: "white",
+                    }}
+                  />
+
+                  <IconInput
+                    name="websiteName"
+                    placeholder="www.your-website.com"
+                    label="Website"
+                    iconSrc="/icons/round.svg"
+                    iconBgColor="purple"
+                    inputType="text"
+                    labelProps={{
+                      color: "white",
+                    }}
+                    isOptional
+                  />
+
                   <Field name="descriptionText">
                     {({ field }: any) => (
                       <FormControl>
@@ -190,30 +92,37 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
                             display="flex"
                             alignItems="flex-start"
                             pointerEvents="none"
-                            children={
-                              <Box>
-                                <Image
-                                  src="/icons/description.svg"
-                                  height={25}
-                                  width={25}
-                                  alt="password"
-                                />
-                              </Box>
-                            }
-                          />
+                          >
+                            <Box>
+                              <Image
+                                src="/icons/description.svg"
+                                height={25}
+                                width={25}
+                                alt="password"
+                              />
+                            </Box>
+                          </InputLeftElement>
                           <Textarea
                             rows="6"
                             isRequired
-                            {...field}
                             placeholder="Tell me more about what your app should do, and what kind of features it should have"
                             rounded="6px"
                             pl="50px"
+                            color="black"
                             justifyContent="flex-start"
                             alignItems="flex-start"
                             bg="white"
-                            w="full"
-                            border="1px solid #D0D0D6"
                             textStyle="placeholder"
+                            w="full"
+                            _placeholder={{
+                              textStyle: "placeholder",
+                            }}
+                            _hover={{
+                              border: "1px solid #D0D0D6",
+                            }}
+                            minH="48px"
+                            border=" 1px solid #D0D0D6"
+                            {...field}
                           />
                         </InputGroup>
                       </FormControl>
@@ -247,7 +156,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
           />
         </Box>
       </HStack>
-    </Container>
+    </Center>
   );
 };
 
