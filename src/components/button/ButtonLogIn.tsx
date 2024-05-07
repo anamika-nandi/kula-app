@@ -40,7 +40,7 @@ export function ButtonLogIn(props: ButtonLogInProps) {
           height={23}
           width={23}
           alt="sign up"
-          style={{ color: "blue" }}
+          style={{ color: "white" }}
         />
       </Box>
       <Stack gap="0" color="white">
@@ -49,8 +49,8 @@ export function ButtonLogIn(props: ButtonLogInProps) {
           Login here
         </Text>
       </Stack>
-      <Box color="white" width="33px" height="22px">
-        <ChevronRightIcon width="33px" height="25px" />
+      <Box width="33px" height="22px" color="blue">
+        <ChevronRightIcon width="33px" height="25px" color="blue" />
       </Box>
     </Button>
   );
