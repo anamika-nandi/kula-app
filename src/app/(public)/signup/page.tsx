@@ -1,19 +1,15 @@
 "use client";
 import React from "react";
-import {
-  HStack,
-  Stack,
-  Text,
-  useDisclosure,
-  Center,
-} from "@chakra-ui/react";
+import { HStack, Stack, Text, useDisclosure, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import IconButton from "@/components/button/IconButton";
+import { CustomModal } from "@/components/CustomModal";
+import SignupModal from "./ui/signup-modal";
 
 interface SignupProps {}
 
 const Signup: React.FC<SignupProps> = (props) => {
-  const { onOpen } = useDisclosure();
+  const { onOpen, isOpen, onClose } = useDisclosure();
   return (
     <Center h="100vh">
       <HStack
@@ -53,7 +49,7 @@ const Signup: React.FC<SignupProps> = (props) => {
             </IconButton>
 
             <Text textStyle="heading2" color="white" textAlign="center">
-              By singning in you agree to our{" "}
+              By signin in you agree to our{" "}
               <Text as="span" textDecor="underline">
                 Privacy
               </Text>
@@ -69,6 +65,9 @@ const Signup: React.FC<SignupProps> = (props) => {
         </Stack>
         <Image src="/img/kuala.png" height={440} width={578} alt="kuala-img" />
       </HStack>
+      <CustomModal isOpen={isOpen} onClose={onClose}>
+        <SignupModal />
+      </CustomModal>
     </Center>
   );
 };

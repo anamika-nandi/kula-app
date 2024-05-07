@@ -1,5 +1,3 @@
-import { color } from "framer-motion";
-
 const textStyles = {
   formlabel: {
     fontWeight: "semibold",

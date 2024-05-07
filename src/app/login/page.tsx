@@ -13,11 +13,13 @@ import {
   Text,
   InputLeftElement,
   InputGroup,
+  Center,
 } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
-import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import IconButton from "@/components/button/IconButton";
+import IconInput from "@/components/input/IconInput";
 
 interface LogInProps {}
 
@@ -33,65 +35,33 @@ const LogIn: React.FC<LogInProps> = (props) => {
     router.push("/account");
   };
   return (
-    <Container
-      maxW="1920px"
-      height="100vh"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <HStack
-        display="flex"
-        flexDirection={{ base: "column", md: "row" }}
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Stack py="3" px="4" maxW="335px" w="full">
-          <Text textStyle="heading" color="white" textAlign="center">
+    <Center h="100vh">
+      <HStack display="flex" flexDirection={{ base: "column", md: "row" }}>
+        <Stack minW="335px" w="full" spacing={0}>
+          <Text textStyle="heading" mb="10" color="white" textAlign="center">
             Login & Manage your App
           </Text>
-          <Button
-            textStyle="btntext"
-            justifyContent="flex-start"
-            w="full"
-            bg="black"
-            border="none"
-            leftIcon={
-              <Box mr={12}>
-                <Image
-                  src="/icons/apple.svg"
-                  height={22}
-                  width={18}
-                  alt="apple"
-                />
-              </Box>
-            }
-          >
-            Sign in with Apple
-          </Button>
-          <Button
-            textStyle="btntext"
-            w="full"
-            bg="white"
-            justifyContent="flex-start"
-            color="black"
-            border="none"
-            leftIcon={
-              <Box mr={12}>
-                <Image
-                  src="/icons/google.svg"
-                  height={22}
-                  width={22}
-                  alt="google"
-                />
-              </Box>
-            }
-          >
-            Sign in with Google
-          </Button>
-          <Text textStyle="heading2" color="white" textAlign="center">
-            or
-          </Text>
+          <Stack rowGap="4">
+            <IconButton
+              bg="black"
+              iconSrc="/icons/apple.svg"
+              altText="Sign up with Apple"
+            >
+              Sign up with Apple
+            </IconButton>
+            <IconButton
+              bg="white"
+              color="black"
+              iconSrc="/icons/google.svg"
+              altText="Google"
+            >
+              Sign up with Google
+            </IconButton>
+            <Text textStyle="heading2" color="white" textAlign="center">
+              or
+            </Text>
+          </Stack>
+
           <Formik
             initialValues={{
               email: "",
@@ -103,136 +73,41 @@ const LogIn: React.FC<LogInProps> = (props) => {
           >
             <Form>
               <VStack spacing="3" mt="4">
-                <Field name="email">
-                  {({ field }: any) => (
-                    <FormControl>
-                      <FormLabel textStyle="formlabel" color="white">
-                        E-Mail
-                      </FormLabel>
-                      <InputGroup
-                        display="flex"
-                        alignItems="center"
-                        w="full"
-                        h="full"
-                        minH="50px"
-                      >
-                        <Input
-                          isRequired
-                          {...field}
-                          placeholder="name@mail.com"
-                          rounded="6px"
-                          w="full"
-                          h="full"
-                          pl="50px"
-                          minH="50px"
-                          bg="white"
-                          border="1px solid #D0D0D6"
-                          textStyle="placeholder"
-                        />
-                        <InputLeftElement
-                          height="full"
-                          mx={2}
-                          pointerEvents="none"
-                          children={
-                            <Box
-                              width={34}
-                              height={34}
-                              borderRadius={4}
-                              display="flex"
-                              alignItems="center"
-                              justifyContent="center"
-                              backgroundColor="purple"
-                            >
-                              <Image
-                                src="/icons/email.svg"
-                                height={17}
-                                width={22}
-                                alt="email"
-                              />
-                            </Box>
-                          }
-                        />
-                      </InputGroup>
-                    </FormControl>
-                  )}
-                </Field>
-                <Field name="password">
-                  {({ field }: any) => (
-                    <FormControl>
-                      <FormLabel textStyle="formlabel" color="white">
-                        Password
-                      </FormLabel>
-                      <InputGroup
-                        display="flex"
-                        alignItems="center"
-                        w="full"
-                        h="full"
-                        minH="50px"
-                        border="none"
-                      >
-                        <Input
-                          isRequired
-                          {...field}
-                          placeholder="..........................."
-                          rounded="6px"
-                          pl="50px"
-                          bg="white"
-                          w="full"
-                          h="full"
-                          minH="50px"
-                          border="1px solid #D0D0D6"
-                          textStyle="placeholder"
-                        />
-                        <InputLeftElement
-                          height="full"
-                          pointerEvents="none"
-                          mx={2}
-                          children={
-                            <Box
-                              width={34}
-                              height={34}
-                              borderRadius={4}
-                              display="flex"
-                              alignItems="center"
-                              justifyContent="center"
-                              backgroundColor="gray"
-                            >
-                              <Image
-                                src="/icons/password.svg"
-                                height={19}
-                                width={13}
-                                alt="password"
-                              />
-                            </Box>
-                          }
-                        />
-                      </InputGroup>
-                      <Text
-                        textDecoration="underline"
-                        textAlign="end"
-                        textStyle="heading2"
-                        color="white"
-                        mt={3}
-                      >
-                        Can't remeber your password?
-                      </Text>
-                    </FormControl>
-                  )}
-                </Field>
+                <IconInput
+                  name="email"
+                  placeholder="name@gmail.com"
+                  label="E-Mail"
+                  iconSrc="/icons/email.svg"
+                  iconBgColor="purple"
+                  inputType="email"
+                  labelProps={{
+                    color: "white",
+                  }}
+                />
 
-                <Button
-                  type="submit"
-                  fontSize="sm"
-                  rounded="md"
-                  border="none"
-                  textAlign="center"
-                  w="full"
+                <IconInput
+                  name="password"
+                  placeholder="................."
+                  label="Password"
+                  iconSrc="/icons/password.svg"
+                  iconBgColor="gray"
+                  inputType="password"
+                  iconHeight={19}
+                  iconWidth={13}
+                  labelProps={{
+                    color: "white",
+                  }}
+                />
+
+                <IconButton
                   bg="blue"
+                  iconSrc="/icons/email.svg"
+                  altText="Email"
                   onClick={handleClick}
-                  mt={5}
+                  mt="2"
                 >
-                  Sign in with E-Mail
-                </Button>
+                  Sign up with Email
+                </IconButton>
               </VStack>
             </Form>
           </Formik>
@@ -240,8 +115,8 @@ const LogIn: React.FC<LogInProps> = (props) => {
             By singning in you agree to our{" "}
             <Text as="span" textDecor="underline">
               Privacy
-            </Text>
-            &
+            </Text>{" "}
+            &{" "}
             <Text as="span" textDecor="underline">
               Terms
             </Text>
@@ -257,7 +132,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
           />
         </Box>
       </HStack>
-    </Container>
+    </Center>
   );
 };
 

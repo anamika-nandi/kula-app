@@ -16,7 +16,6 @@ const theme = extendTheme(
         "*": {
           userSelect: "none",
           boxSizing: "border-box",
-          transition: "all 0.25s ease-out", // Global transition
         },
         body: {
           bg: "kula_blue",
