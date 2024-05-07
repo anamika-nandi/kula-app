@@ -1,16 +1,21 @@
 "use client";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { MdWindow } from "react-icons/md";
 
 export interface ButtonAppsProps {}
 
 export function ButtonApps(props: ButtonAppsProps) {
   const {} = props;
+  const router = useRouter();
 
+  const handleApps = () => {
+    router.push("/my-apps");
+  };
   return (
-    <HStack
+    <Button
       width={268}
       h={58}
       border="2px solid lightgray"
@@ -18,6 +23,7 @@ export function ButtonApps(props: ButtonAppsProps) {
       bg="white"
       justifyContent="space-between"
       pl="3"
+      onClick={handleApps}
     >
       <Box
         width={38}
@@ -36,6 +42,6 @@ export function ButtonApps(props: ButtonAppsProps) {
       <Box color="lightgray" width="33px" height="22px">
         <ChevronRightIcon width="33px" height="22px" />
       </Box>
-    </HStack>
+    </Button>
   );
 }

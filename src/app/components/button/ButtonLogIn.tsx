@@ -1,22 +1,28 @@
 "use client";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { FaGreaterThan } from "react-icons/fa";
 
 export interface ButtonLogInProps {}
 
 export function ButtonLogIn(props: ButtonLogInProps) {
   const {} = props;
+  const router = useRouter();
 
+  const handleLoginClick = () => {
+    router.push("/login");
+  };
   return (
-    <HStack
+    <Button
       width={268}
       h={58}
       border="2px solid lightgray"
       borderRadius="8px"
       bg="white"
       pl="3"
+      onClick={handleLoginClick}
     >
       <Box
         width={38}
@@ -43,6 +49,6 @@ export function ButtonLogIn(props: ButtonLogInProps) {
       <Box color="lightgray" width="33px" height="22px">
         <ChevronRightIcon width="33px" height="22px" />
       </Box>
-    </HStack>
+    </Button>
   );
 }

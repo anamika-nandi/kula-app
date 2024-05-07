@@ -11,17 +11,42 @@ import {
 import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
+
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { ButtonAccount } from "./button/ButtonAccount";
 import { ButtonApps } from "./button/ButtonApps";
 import { ButtonSignUp } from "./button/ButtonSignUp";
 import { ButtonLogIn } from "./button/ButtonLogIn";
+import { usePathname, useRouter } from "next/navigation";
 
 interface NavProps {
   app: string;
 }
 
 export function Nav({ app }: NavProps) {
+  const pathname = usePathname();
+
+  const renderButton = () => {
+    switch (pathname) {
+      case "/":
+        return <ButtonLogIn />;
+      case "/login":
+        return <ButtonSignUp />;
+      case "/account":
+        return <ButtonApps />;
+      case "/my-apps":
+        return <ButtonAccount />;
+      case "/app-name":
+        return <ButtonAccount />;
+      case "/create-new-app":
+        return <ButtonAccount />;
+      case "/sign-in-one":
+        return <ButtonLogIn />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <nav>
       <Stack flexDir="row" alignItems="center" justifyContent="space-between">
@@ -48,10 +73,7 @@ export function Nav({ app }: NavProps) {
           </BreadcrumbItem>
         </Breadcrumb>
         <Box my="5" mr="17px">
-          {/* <ButtonAccount /> */}
-          {/* <ButtonApps /> */}
-          {/* <ButtonSignUp /> */}
-          <ButtonLogIn />
+          {renderButton()}
         </Box>
       </Stack>
     </nav>

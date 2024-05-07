@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 import theme from "../theme";
 import localFont from "next/font/local";
+import { Nav } from "./components/Nav";
 const inter = Inter({ subsets: ["latin"] });
 // import z from "../fonts";
 
@@ -63,7 +64,10 @@ export default function RootLayout({
       <body
         className={`${sp.className} ${sfDisplay.className} ${sfText.className}`}
       >
-        <ChakraProvider theme={theme}>{children}</ChakraProvider>
+        <ChakraProvider theme={theme}>
+          <Nav app="my-apps" />
+          {children}
+        </ChakraProvider>
       </body>
     </html>
   );
