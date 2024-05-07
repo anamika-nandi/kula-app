@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Container, HStack, Stack, Button, Text } from "@chakra-ui/react";
 

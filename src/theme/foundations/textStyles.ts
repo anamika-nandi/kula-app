@@ -28,6 +28,13 @@ const textStyles = {
     lineHeight: ["14px", "16px"],
     fontWeight: "medium",
   },
+  heading4: {
+    fontFamily: "sf_text",
+    fontWeight: "medium",
+    fontSize: "17px",
+    lineHeight: "20px",
+    letterSpacing: "-0.94px",
+  },
   heading3: {
     // fontFamily: "heading",
     fontSize: "30px",

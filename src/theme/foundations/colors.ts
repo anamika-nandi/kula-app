@@ -7,6 +7,8 @@ const colors = {
   lightblue: "#50BBE9",
   bgblue: "#29ABE2",
   orange: "#FF3A30",
+  lightgray: "#D0D0D6",
+  green: "#00CC48",
 
   purple: "#AF53DE",
   purpledark: "#AF52DE",
