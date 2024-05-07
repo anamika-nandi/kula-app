@@ -1,14 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Container,
-  HStack,
-  Stack,
-  Button,
-  Text,
-  Center,
-  VStack,
-} from "@chakra-ui/react";
+import { HStack, Button, Text, Center, VStack } from "@chakra-ui/react";
 
 interface CreateNewAppProps {}
 
@@ -23,7 +15,15 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
     <Center h="100vh">
       <HStack display="flex" alignItems="center" justifyContent="center">
         <VStack maxW="335px" w="full" gap="45px">
-          <Text textStyle="heading">Are you on Desktop?</Text>
+          <Text
+            textStyle="heading"
+            textAlign="center"
+            lineHeight="120%"
+            fontSize="34px"
+          >
+            Are you on <br />
+            Desktop?
+          </Text>
           <Text
             color="white"
             textAlign="center"
