@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import localFont from "next/font/local";
 import { ChakraClientProvider } from "@/providers/ChakraClientProvider";
+import { Box } from "@chakra-ui/react";
+import { OnlyDesktop } from "@/components/OnlyDesktop";
 
 export const metadata: Metadata = {
   title: "Kula",
@@ -58,7 +60,9 @@ export default function RootLayout({
       <body
         className={`${sp.className} ${sfDisplay.className} ${sfText.className}`}
       >
-        <ChakraClientProvider>{children}</ChakraClientProvider>
+        <ChakraClientProvider>
+          <OnlyDesktop>{children}</OnlyDesktop>
+        </ChakraClientProvider>
       </body>
     </html>
   );
