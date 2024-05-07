@@ -1,9 +1,8 @@
 "use client";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FaGreaterThan } from "react-icons/fa";
 
 export interface ButtonLogInProps {}
 

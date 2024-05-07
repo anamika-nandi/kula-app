@@ -16,14 +16,13 @@ import { ButtonAccount } from "./button/ButtonAccount";
 import { ButtonApps } from "./button/ButtonApps";
 import { ButtonSignUp } from "./button/ButtonSignUp";
 import { ButtonLogIn } from "./button/ButtonLogIn";
+import Link from "next/link";
 
 interface NavProps {
-  breadcrumb?: [
-    {
-      href: string;
-      label: string;
-    }
-  ];
+  breadcrumb: {
+    href: string;
+    label: string;
+  }[];
   page: string;
 }
 
@@ -35,9 +34,9 @@ export function Nav({ breadcrumb, page }: NavProps) {
       case "signup":
         return <ButtonLogIn />;
       case "apps":
-        return <ButtonApps />;
-      case "accounts":
         return <ButtonAccount />;
+      case "account":
+        return <ButtonApps />;
 
       default:
         return null;
@@ -45,18 +44,20 @@ export function Nav({ breadcrumb, page }: NavProps) {
   };
 
   return (
-    <nav>
+    <Box as="nav" pos="fixed" w="full">
       <HStack justifyContent="space-between">
-        <Image
-          src="/img/kula_logo.png"
-          width={177}
-          height={87}
-          alt="kula logo"
-        />
+        <Link href="/account">
+          <Image
+            src="/img/kula_logo.png"
+            width={177}
+            height={87}
+            alt="kula logo"
+          />
+        </Link>
 
         <Breadcrumb
           spacing="8px"
-          separator={<ChevronRightIcon color="white" />}
+          separator={<ChevronRightIcon boxSize={8} color="white" />}
         >
           {breadcrumb?.map((item, index) => (
             <BreadcrumbItem key={index}>
@@ -77,6 +78,6 @@ export function Nav({ breadcrumb, page }: NavProps) {
           {renderButton()}
         </Box>
       </HStack>
-    </nav>
+    </Box>
   );
 }

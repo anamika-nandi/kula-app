@@ -3,7 +3,6 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FaGreaterThan } from "react-icons/fa";
 
 export interface ButtonAccountProps {}
 
@@ -18,10 +17,10 @@ export function ButtonAccount(props: ButtonAccountProps) {
     <Button
       width={268}
       h={58}
-      border="2px solid light_gray"
       borderRadius="8px"
-      bg="white"
       pl="3"
+      bg="white"
+      gap="4"
       onClick={handleApps}
     >
       <Box
@@ -35,9 +34,11 @@ export function ButtonAccount(props: ButtonAccountProps) {
       >
         <Image src="/icons/round.svg" height={17} width={22} alt="round" />
       </Box>
-      <Stack gap="0">
-        <Text textStyle="heading4">Hi, Name!</Text>
-        <Text color="gray" textStyle="heading2">
+      <Stack gap="0" color="black">
+        <Text align="start" fontWeight="bold" textStyle="heading4">
+          Hi, Name!
+        </Text>
+        <Text align="start" color="gray" textStyle="heading2">
           Manage your Account
         </Text>
       </Stack>

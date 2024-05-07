@@ -1,6 +1,6 @@
 "use client";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { MdWindow } from "react-icons/md";
@@ -16,14 +16,12 @@ export function ButtonApps(props: ButtonAppsProps) {
   };
   return (
     <Button
-      width={268}
       h={58}
-      border="2px solid light_gray"
       borderRadius="8px"
-      bg="white"
-      justifyContent="space-between"
       pl="3"
       onClick={handleApps}
+      bg="white"
+      gap="4"
     >
       <Box
         width={38}
@@ -32,15 +30,17 @@ export function ButtonApps(props: ButtonAppsProps) {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        backgroundColor="blue"
+        bg="green"
       >
-        <MdWindow height={29} width={26} color="white" />
+        <Icon height={6} width={6} color="white" as={MdWindow} />
       </Box>
-      <Stack gap="0">
-        <Text textStyle="heading4">Manage my Apps</Text>
-      </Stack>
+      <HStack gap="0" color="black">
+        <Text align="start" fontWeight="bold" textStyle="heading4">
+          Manage my Apps
+        </Text>
+      </HStack>
       <Box color="light_gray" width="33px" height="22px">
-        <ChevronRightIcon width="33px" height="22px" />
+        <ChevronRightIcon width="33px" height="25px" />
       </Box>
     </Button>
   );
