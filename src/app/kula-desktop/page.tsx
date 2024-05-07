@@ -1,5 +1,14 @@
+"use client";
 import React from "react";
-import { Container, HStack, Stack, Button, Text } from "@chakra-ui/react";
+import {
+  Container,
+  HStack,
+  Stack,
+  Button,
+  Text,
+  Center,
+  VStack,
+} from "@chakra-ui/react";
 
 interface CreateNewAppProps {}
 
@@ -11,20 +20,17 @@ interface FormValues {
 
 const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
   return (
-    <Container maxW="container.xl">
+    <Center h="100vh">
       <HStack display="flex" alignItems="center" justifyContent="center">
-        <Stack maxW="335px" w="full" gap="45px">
+        <VStack maxW="335px" w="full" gap="45px">
+          <Text textStyle="heading">Are you on Desktop?</Text>
           <Text
-            fontFamily="Sofia Pro"
-            fontSize={["24px", "28px", "34px"]}
-            lineHeight={["28px", "32px", "39px"]}
-            fontWeight="bold"
             color="white"
             textAlign="center"
+            fontSize="base"
+            fontFamily="body"
+            fontWeight="medium"
           >
-            Are you on Desktop?
-          </Text>
-          <Text color="white" textAlign="center" textStyle="btntext">
             Make your screen bigger!
           </Text>
           <Button
@@ -39,9 +45,9 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
           >
             or download kula to your phone
           </Button>
-        </Stack>
+        </VStack>
       </HStack>
-    </Container>
+    </Center>
   );
 };
 
