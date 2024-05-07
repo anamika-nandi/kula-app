@@ -9,28 +9,13 @@ import {
   Text,
   Grid,
   useDisclosure,
-  Modal,
-  ModalContent,
-  ModalCloseButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import SignUp from "../signup/page";
 
-interface SignInProps {}
+interface SignupProps {}
 
-interface FormValues {
-  email: string;
-  password: string;
-}
-
-const SignIn: React.FC<SignInProps> = (props) => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push("/signup");
-  };
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const Signup: React.FC<SignupProps> = (props) => {
+  const { onOpen } = useDisclosure();
   return (
     <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
       <HStack
@@ -96,14 +81,6 @@ const SignIn: React.FC<SignInProps> = (props) => {
               Sign up with Email
             </Button>
 
-            <Modal isOpen={isOpen} onClose={onClose}>
-              <ModalContent minH="586px" maxW="435px">
-                <ModalCloseButton />
-
-                <SignUp />
-              </ModalContent>
-            </Modal>
-
             <Text textStyle="heading2" color="white" textAlign="center">
               By singning in you agree to our{" "}
               <Text as="span" textDecor="underline">
@@ -130,4 +107,4 @@ const SignIn: React.FC<SignInProps> = (props) => {
   );
 };
 
-export default SignIn;
+export default Signup;

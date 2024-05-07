@@ -4,9 +4,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Link,
   Stack,
-  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -17,31 +15,29 @@ import { ButtonAccount } from "./button/ButtonAccount";
 import { ButtonApps } from "./button/ButtonApps";
 import { ButtonSignUp } from "./button/ButtonSignUp";
 import { ButtonLogIn } from "./button/ButtonLogIn";
-import { usePathname, useRouter } from "next/navigation";
 
 interface NavProps {
-  app: string;
+  breadcrumb?: [
+    {
+      href: string;
+      label: string;
+    }
+  ];
+  page: string;
 }
 
-export function Nav({ app }: NavProps) {
-  const pathname = usePathname();
-
+export function Nav({ breadcrumb, page }: NavProps) {
   const renderButton = () => {
-    switch (pathname) {
-      case "/":
+    switch (page) {
+      case "login":
         return <ButtonLogIn />;
-      case "/login":
+      case "signup":
         return <ButtonSignUp />;
-      case "/account":
+      case "apps":
         return <ButtonApps />;
-      case "/my-apps":
+      case "accounts":
         return <ButtonAccount />;
-      case "/app-name":
-        return <ButtonAccount />;
-      case "/create-new-app":
-        return <ButtonAccount />;
-      case "/sign-in-one":
-        return <ButtonLogIn />;
+
       default:
         return null;
     }
@@ -61,17 +57,20 @@ export function Nav({ app }: NavProps) {
           spacing="8px"
           separator={<ChevronRightIcon color="white" />}
         >
-          <BreadcrumbItem>
-            <NextLink href={`/${app}`} passHref>
-              <Link color="white">{app} </Link>
-            </NextLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="#" color="white">
-              Create a new App
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+          {breadcrumb?.map((item, index) => (
+            <BreadcrumbItem key={index}>
+              <BreadcrumbLink
+                as={NextLink}
+                href={item.href}
+                passHref
+                color="white"
+              >
+                {item.label}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          ))}
         </Breadcrumb>
+
         <Box my="5" mr="17px">
           {renderButton()}
         </Box>

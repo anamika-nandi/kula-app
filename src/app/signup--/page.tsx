@@ -15,6 +15,7 @@ import {
 import { Formik, Form, Field } from "formik";
 import Image from "next/image";
 import Link from "next/link";
+import IconInput from "@/components/input/IconInput";
 
 interface SignUpProps {}
 
@@ -51,7 +52,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
         >
           <Text>Already have an account? </Text>
           <Link href="/login" passHref>
-            <Text as="a" textDecor="underline" color="form-blue">
+            <Text as="a" textDecor="underline" color="form_blue">
               Log in here
             </Text>
           </Link>
@@ -97,7 +98,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                             display="flex"
                             alignItems="center"
                             justifyContent="center"
-                            backgroundColor="icon-orange"
+                            backgroundColor="orange"
                           >
                             <Image
                               src="/icons/name.svg"
@@ -112,6 +113,12 @@ const SignUp: React.FC<SignUpProps> = (props) => {
                   </FormControl>
                 )}
               </Field>
+              <IconInput
+                name="email"
+                placeholder=""
+                label="E-Mail"
+                iconSrc="/icons/email.svg"
+              />
 
               <Field name="email">
                 {({ field }: any) => (
@@ -266,7 +273,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
 
               <Button
                 textAlign="center"
-                bg="form-blue"
+                bg="form_blue"
                 h="50px"
                 mt="5"
                 opacity={1}

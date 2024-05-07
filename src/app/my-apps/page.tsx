@@ -53,7 +53,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
             height="25px"
             borderRadius={8}
             color="white"
-            bg="lightblue"
+            bg="light_blue"
             border="none"
             onClick={handleClick}
           >
@@ -68,7 +68,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
             height="25px"
             borderRadius={8}
             color="white"
-            bg="lightblue"
+            bg="light_blue"
             border="none"
           >
             Manage Billing
@@ -82,7 +82,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            backgroundColor="lightblue"
+            backgroundColor="light_blue"
           >
             <Image src="/icons/plus.svg" height={62} width={80} alt="icon" />
           </Box>

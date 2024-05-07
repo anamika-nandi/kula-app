@@ -30,7 +30,7 @@ const Account: React.FC<AccountProps> = (props) => {
   return (
     <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
       <Stack maxW="343px" w="full" alignItems="center" justifyContent="center">
-        <Box bg="icon.icon-orange" height={140} width={140}>
+        <Box bg="icon.orange" height={140} width={140}>
           <Image
             src="/img/kuala_setting_up.png"
             height={140}
@@ -46,7 +46,7 @@ const Account: React.FC<AccountProps> = (props) => {
           h="25px"
           borderRadius={8}
           color="white"
-          bg="lightblue"
+          bg="light_blue"
           border="none"
         >
           Change
@@ -99,7 +99,7 @@ const Account: React.FC<AccountProps> = (props) => {
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
-                              backgroundColor="icon-orange"
+                              backgroundColor="orange"
                             >
                               <Image
                                 src="/icons/star.svg"
@@ -213,7 +213,7 @@ const Account: React.FC<AccountProps> = (props) => {
             w="59px"
             borderRadius={8}
             color="white"
-            bg="lightblue"
+            bg="light_blue"
             border="none"
           >
             Copy

@@ -5,25 +5,24 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FaGreaterThan } from "react-icons/fa";
 
-export interface ButtonSignUpProps {}
+export interface ButtonAccountProps {}
 
-export function ButtonSignUp(props: ButtonSignUpProps) {
+export function ButtonAccount(props: ButtonAccountProps) {
   const {} = props;
   const router = useRouter();
 
-  const handleLoginClick = () => {
-    router.push("/sign-in-one");
+  const handleApps = () => {
+    router.push("/account");
   };
-
   return (
     <Button
       width={268}
       h={58}
-      border="2px solid lightgray"
+      border="2px solid light_gray"
       borderRadius="8px"
       bg="white"
       pl="3"
-      onClick={handleLoginClick}
+      onClick={handleApps}
     >
       <Box
         width={38}
@@ -32,15 +31,17 @@ export function ButtonSignUp(props: ButtonSignUpProps) {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        backgroundColor="green"
+        backgroundColor="purple"
       >
-        <Image src="/icons/signup.svg" height={23} width={23} alt="round" />
+        <Image src="/icons/round.svg" height={17} width={22} alt="round" />
       </Box>
-      <Stack gap="0" color="black">
-        <Text textStyle="heading2">Don’t have an Account?</Text>
-        <Text textStyle="heading4">Sign up here</Text>
+      <Stack gap="0">
+        <Text textStyle="heading4">Hi, Name!</Text>
+        <Text color="gray" textStyle="heading2">
+          Manage your Account
+        </Text>
       </Stack>
-      <Box color="lightgray" width="33px" height="22px">
+      <Box color="light_gray" width="33px" height="22px">
         <ChevronRightIcon width="33px" height="22px" />
       </Box>
     </Button>

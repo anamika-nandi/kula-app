@@ -95,7 +95,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
             h="25px"
             borderRadius={8}
             color="white"
-            bg="lightblue"
+            bg="light_blue"
             border="none"
             leftIcon={
               <Box>
@@ -111,7 +111,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
           minW="340px"
           minH="547px"
           h="full"
-          bg="lightblue"
+          bg="light_blue"
           alignItems="center"
           px="11"
           borderRadius="16px"
@@ -142,7 +142,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
               size="sm"
               value={20}
               w="full"
-              bg="bgblue"
+              bg="kula_blue"
             />
           </Box>
           <Text

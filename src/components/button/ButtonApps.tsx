@@ -3,24 +3,25 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FaGreaterThan } from "react-icons/fa";
+import { MdWindow } from "react-icons/md";
 
-export interface ButtonAccountProps {}
+export interface ButtonAppsProps {}
 
-export function ButtonAccount(props: ButtonAccountProps) {
+export function ButtonApps(props: ButtonAppsProps) {
   const {} = props;
   const router = useRouter();
 
   const handleApps = () => {
-    router.push("/account");
+    router.push("/my-apps");
   };
   return (
     <Button
       width={268}
       h={58}
-      border="2px solid lightgray"
+      border="2px solid light_gray"
       borderRadius="8px"
       bg="white"
+      justifyContent="space-between"
       pl="3"
       onClick={handleApps}
     >
@@ -31,17 +32,14 @@ export function ButtonAccount(props: ButtonAccountProps) {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        backgroundColor="purple"
+        backgroundColor="blue"
       >
-        <Image src="/icons/round.svg" height={17} width={22} alt="round" />
+        <MdWindow height={29} width={26} color="white" />
       </Box>
       <Stack gap="0">
-        <Text textStyle="heading4">Hi, Name!</Text>
-        <Text color="gray" textStyle="heading2">
-          Manage your Account
-        </Text>
+        <Text textStyle="heading4">Manage my Apps</Text>
       </Stack>
-      <Box color="lightgray" width="33px" height="22px">
+      <Box color="light_gray" width="33px" height="22px">
         <ChevronRightIcon width="33px" height="22px" />
       </Box>
     </Button>

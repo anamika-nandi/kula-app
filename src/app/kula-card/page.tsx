@@ -90,7 +90,7 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
           <Stack
             w="340px"
             h="570px"
-            bg="lightblue"
+            bg="light_blue"
             alignItems="center"
             gap="5"
             borderRadius="16px"
@@ -118,7 +118,7 @@ const KulaCard: React.FC<KulaCardProps> = (props) => {
                 size="sm"
                 value={item.rate}
                 w="full"
-                bg="bgblue"
+                bg="kula_blue"
               />
             </Box>
             <Box minH="192px">
