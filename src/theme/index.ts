@@ -19,21 +19,14 @@ const theme = extendTheme(
           transition: "all 0.25s ease-out", // Global transition
         },
         body: {
-          bg: "light-blue",
+          bg: "kula_blue",
           scrollBehavior: "smooth",
           minHeight: "100%",
-          color: "foreground",
         },
         html: {
           height: "100%",
         },
       },
-    },
-
-    fontSizes: {
-      sm: "14px",
-      md: "16px",
-      lg: "18px ",
     },
 
     components: {

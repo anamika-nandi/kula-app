@@ -1,23 +1,21 @@
 "use client";
 import React from "react";
 import {
-  Container,
   HStack,
   Stack,
-  Button,
-  Box,
   Text,
-  Grid,
   useDisclosure,
+  Center,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import IconButton from "@/components/button/IconButton";
 
 interface SignupProps {}
 
 const Signup: React.FC<SignupProps> = (props) => {
   const { onOpen } = useDisclosure();
   return (
-    <Container as={Grid} placeItems="center" maxW="720px" h="100dvh">
+    <Center h="100vh">
       <HStack
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
@@ -29,64 +27,39 @@ const Signup: React.FC<SignupProps> = (props) => {
             Create your kula account and make an app
           </Text>
           <Stack rowGap="4">
-            <Button
-              textStyle="btntext"
-              w="full"
+            <IconButton
               bg="black"
-              border="none"
-              justifyContent="flex-start"
-              leftIcon={
-                <Box mr="60px">
-                  <Image
-                    src="/icons/apple.svg"
-                    height={22}
-                    width={18}
-                    alt="apple"
-                  />
-                </Box>
-              }
+              iconSrc="/icons/apple.svg"
+              altText="Sign up with Apple"
             >
-              <Box>Sign up with Apple</Box>
-            </Button>
-
-            <Button
-              textStyle="btntext"
-              w="full"
+              Sign up with Apple
+            </IconButton>
+            <IconButton
               bg="white"
-              justifyContent="flex-start"
               color="black"
-              border="none"
-              leftIcon={
-                <Box mr="60px">
-                  <Image
-                    src="/icons/google.svg"
-                    height={22}
-                    width={22}
-                    alt="google"
-                  />
-                </Box>
-              }
+              iconSrc="/icons/google.svg"
+              altText="Google"
             >
               Sign up with Google
-            </Button>
-            <Button
-              textStyle="btntext"
-              textAlign="center"
-              w="full"
-              color="white"
+            </IconButton>
+
+            <IconButton
               bg="blue"
-              border="none"
+              iconSrc="/icons/email.svg"
+              altText="Email"
               onClick={onOpen}
             >
               Sign up with Email
-            </Button>
+            </IconButton>
 
             <Text textStyle="heading2" color="white" textAlign="center">
               By singning in you agree to our{" "}
               <Text as="span" textDecor="underline">
                 Privacy
-              </Text>{" "}
-              &
+              </Text>
+              <Text as="span" mx="1">
+                &
+              </Text>
               <Text as="span" textDecor="underline">
                 Terms
               </Text>
@@ -94,16 +67,9 @@ const Signup: React.FC<SignupProps> = (props) => {
             </Text>
           </Stack>
         </Stack>
-        <Box>
-          <Image
-            src="/img/kuala.png"
-            height={440}
-            width={578}
-            alt="kuala-img"
-          />
-        </Box>
+        <Image src="/img/kuala.png" height={440} width={578} alt="kuala-img" />
       </HStack>
-    </Container>
+    </Center>
   );
 };
 

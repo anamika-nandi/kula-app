@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 
-import { ChakraProvider } from "@chakra-ui/react";
-
-import theme from "../theme";
 import localFont from "next/font/local";
 import { ChakraClientProvider } from "@/providers/ChakraClientProvider";
 
