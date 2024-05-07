@@ -5,7 +5,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   HStack,
-  Stack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";

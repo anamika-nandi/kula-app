@@ -13,7 +13,6 @@ import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { Nav } from "@/components/Nav";
-import { CustomModal } from "@/components/CustomModal";
 interface AppNameProps {}
 
 interface FormValues {

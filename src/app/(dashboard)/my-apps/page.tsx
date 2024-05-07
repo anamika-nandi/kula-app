@@ -16,7 +16,7 @@ interface FormValues {
 const MyApps: React.FC<MyAppsProps> = (props) => {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/app-name");
+    router.push("/preview");
   };
   return (
     <>
