@@ -29,7 +29,7 @@ const MyApps: React.FC<MyAppsProps> = (props) => {
           },
         ]}
       />
-      <Center h="100vh">
+      <Center h="calc(100vh - 180px)">
         <HStack
           display="flex"
           flexDirection={{ base: "column", md: "row" }}

@@ -34,7 +34,7 @@ const Account: React.FC<AccountProps> = (props) => {
           },
         ]}
       />
-      <Center h="100vh">
+      <Center h="calc(100vh - 180px)">
         <Stack
           maxW="343px"
           w="full"

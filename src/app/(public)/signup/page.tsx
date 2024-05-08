@@ -22,7 +22,7 @@ const Signup: React.FC<SignupProps> = (props) => {
           },
         ]}
       />
-      <Center h="calc(100vh - 80px)">
+      <Center h="calc(100vh - 180px)">
         <HStack
           display="flex"
           flexDirection={{ base: "column", md: "row" }}

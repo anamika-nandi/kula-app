@@ -41,7 +41,7 @@ const AppName: React.FC<AppNameProps> = (props) => {
           },
         ]}
       />
-      <Center h="100vh">
+      <Center h="calc(100vh - 180px)">
         <Flex
           flexDirection={{ base: "column", md: "row" }}
           alignItems="flex-start"

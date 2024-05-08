@@ -33,7 +33,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
         ]}
       />
 
-      <Center h="100vh">
+      <Center h="calc(100vh - 180px)">
         <HStack display="flex" flexDirection={{ base: "column", md: "row" }}>
           <Stack minW="335px" w="full" spacing={0}>
             <Text textStyle="heading" mb="10" color="white" textAlign="center">

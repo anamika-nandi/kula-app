@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import { GoArrowUpLeft } from "react-icons/go";
 import { HiOutlineArrowDownRight } from "react-icons/hi2";
+import Link from "next/link";
 export interface OnlyDesktopProps {
   children: React.ReactNode;
 }
@@ -87,9 +88,23 @@ export function OnlyDesktop(props: OnlyDesktopProps) {
       <Box display={{ base: "none", lg: "block" }}>
         {children}
 
-        <Center py="4" as="footer">
+        <Center justifyContent="end" p="4" as="footer" gap="4">
           <Text fontSize="lg" color="white" textAlign="center">
-            © 2024 Kula. All rights reserved.
+            <Link href="/privacy">
+              <Text as="span" fontFamily="body" textDecor="underline" px="1">
+                Privacy
+              </Text>
+            </Link>
+            <Link href="/terms">
+              <Text as="span" fontFamily="body" textDecor="underline" px="1">
+                Terms
+              </Text>
+            </Link>
+            <Link href="/imprint">
+              <Text as="span" fontFamily="body" textDecor="underline" px="1">
+                Imprint
+              </Text>
+            </Link>
           </Text>
         </Center>
       </Box>
