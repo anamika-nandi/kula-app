@@ -84,7 +84,15 @@ export function OnlyDesktop(props: OnlyDesktopProps) {
           <Icon as={HiOutlineArrowDownRight} boxSize="10" color="white" />
         </Stack>
       </Box>
-      <Box display={{ base: "none", lg: "block" }}>{children}</Box>
+      <Box display={{ base: "none", lg: "block" }}>
+        {children}
+
+        <Center py="4" as="footer">
+          <Text fontSize="lg" color="white" textAlign="center">
+            © 2024 Kula. All rights reserved.
+          </Text>
+        </Center>
+      </Box>
     </>
   );
 }
