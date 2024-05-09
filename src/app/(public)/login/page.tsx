@@ -33,7 +33,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
         ]}
       />
 
-      <Center h="100vh">
+      <Center h="calc(100vh - 180px)">
         <HStack display="flex" flexDirection={{ base: "column", md: "row" }}>
           <Stack minW="335px" w="full" spacing={0}>
             <Text textStyle="heading" mb="10" color="white" textAlign="center">
@@ -45,7 +45,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                 iconSrc="/icons/apple.svg"
                 altText="Sign up with Apple"
               >
-                Sign up with Apple
+                Sign in with Apple
               </IconButton>
               <IconButton
                 bg="white"
@@ -53,7 +53,7 @@ const LogIn: React.FC<LogInProps> = (props) => {
                 iconSrc="/icons/google.svg"
                 altText="Google"
               >
-                Sign up with Google
+                Sign in with Google
               </IconButton>
               <Text textStyle="heading2" color="white" textAlign="center">
                 or
@@ -104,13 +104,13 @@ const LogIn: React.FC<LogInProps> = (props) => {
                     onClick={handleClick}
                     mt="2"
                   >
-                    Sign up with Email
+                    Sign in with Email
                   </IconButton>
                 </VStack>
               </Form>
             </Formik>
             <Text textStyle="heading2" color="white" textAlign="center" mt={4}>
-              By singning in you agree to our{" "}
+              By signing in you agree to our{" "}
               <Text as="span" textDecor="underline">
                 Privacy
               </Text>{" "}

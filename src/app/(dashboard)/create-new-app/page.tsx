@@ -49,7 +49,7 @@ const CreateNewApp: React.FC<CreateNewAppProps> = (props) => {
           },
         ]}
       />
-      <Center h="100vh">
+      <Center h="calc(100vh - 180px)">
         <HStack flexDirection={{ base: "column", md: "row" }}>
           <Stack maxW="335px" w="full" gap="3">
             <Text textStyle="heading" color="white" textAlign="center">

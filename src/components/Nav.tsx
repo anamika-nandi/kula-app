@@ -43,7 +43,7 @@ export function Nav({ breadcrumb, page }: NavProps) {
   };
 
   return (
-    <Box as="nav" pos="fixed" w="full">
+    <Box as="nav" pos="sticky" top="0" bg="kula_blue" w="full">
       <HStack justifyContent="space-between">
         <Link href="/account">
           <Image
