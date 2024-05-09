@@ -1,7 +1,16 @@
-"use client";
 import { Box } from "@chakra-ui/react";
-import LogIn from "./(public)/login/page";
+import { Hero } from "./components/Hero";
+import { ProductSection } from "./components/ProductSection";
+import { MetalSection } from "./components/MetalSection";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
-  return <Box></Box>;
+  return (
+    <Box>
+      <Hero />
+      <ProductSection />
+      <MetalSection />
+      <Footer />
+    </Box>
+  );
 }

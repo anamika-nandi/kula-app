@@ -1,19 +1,10 @@
 "use client";
-import {
-  background,
-  extendTheme,
-  withDefaultColorScheme,
-} from "@chakra-ui/react";
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
 import * as foundations from "./foundations";
 const theme = extendTheme(
   {
     ...foundations,
-    fonts: {
-      heading: `'Sofia Pro', sans-serif`,
-      sf_text: `'SF Pro Text', sans-serif`,
-      sf_display: `'SF Pro Display', sans-serif`,
-    },
 
     styles: {
       global: {
@@ -37,8 +28,6 @@ const theme = extendTheme(
         baseStyle: {
           h: "60px",
           borderRadius: "10px",
-          background: "yellow.200",
-          color: "white",
         },
         variants: {},
       },

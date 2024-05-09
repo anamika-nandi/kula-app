@@ -1,53 +1,15 @@
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 
-import localFont from "next/font/local";
 import { ChakraClientProvider } from "@/providers/ChakraClientProvider";
-import { OnlyDesktop } from "@/components/OnlyDesktop";
+import theme from "@/theme";
 
 export const metadata: Metadata = {
-  title: "Kula",
-  description: "Kula App",
+  title: "Xcelerator",
+  description: "Xcelerator App",
 };
-const sfDisplay = localFont({
-  src: [
-    {
-      path: "../fonts/sf/display/SF-Pro-Display-Semibold.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/sf/display/SF-Pro-Display-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-});
 
-const sfText = localFont({
-  src: [
-    {
-      path: "../fonts/sf/text/SF-Pro-Text-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/sf/text/SF-Pro-Text-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-});
-
-const sp = localFont({
-  src: [
-    {
-      path: "../fonts/sofia-pro/sofia_pro_bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
-
+const montserrat = Montserrat({ subsets: ["latin"] });
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,12 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${sp.className} ${sfDisplay.className} ${sfText.className}`}
-      >
-        <ChakraClientProvider>
-          <OnlyDesktop>{children}</OnlyDesktop>
-        </ChakraClientProvider>
+      <body className={montserrat.className}>
+        <ChakraClientProvider>{children}</ChakraClientProvider>
       </body>
     </html>
   );
