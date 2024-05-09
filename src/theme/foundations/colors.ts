@@ -1,17 +1,14 @@
 const colors = {
-  gray: "#9A9A9A",
-  black: "#000000",
   white: "#FFFFFF",
-  form_blue: "#367CFF",
-  blue: "#027AFF",
-  light_blue: "#50BBE9",
-  kula_blue: "#29ABE2",
-  red: "#FF3A30",
-  light_gray: "#D0D0D6",
-  green: "#00CC48",
-  purple: "#AF53DE",
-  orange: "#FF9500",
-  yellow: "#FBBC04",
+  "white.100": "#EEEEEE",
+  "gray.100": "#CECCCC",
+  "black.100": "#272727",
+  "black.200": "#000000",
+  "black.300": "#161616",
+  "gray.200": "#E2E2E2",
+  "yellow.100": "#DD9613",
+  "yellow.200": "#DDA81B",
+  "yellow.300": "#DDA71B",
 };
 
 export default colors;

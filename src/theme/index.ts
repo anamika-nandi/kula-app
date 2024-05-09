@@ -1,5 +1,9 @@
 "use client";
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import {
+  background,
+  extendTheme,
+  withDefaultColorScheme,
+} from "@chakra-ui/react";
 
 import * as foundations from "./foundations";
 const theme = extendTheme(
@@ -18,7 +22,7 @@ const theme = extendTheme(
           boxSizing: "border-box",
         },
         body: {
-          bg: "kula_blue",
+          // bg: "white",
           scrollBehavior: "smooth",
           minHeight: "100%",
         },
@@ -31,14 +35,25 @@ const theme = extendTheme(
     components: {
       Button: {
         baseStyle: {
-          h: "50px",
+          h: "60px",
+          borderRadius: "10px",
+          background: "yellow.200",
+          color: "white",
         },
         variants: {},
       },
-      Progress: {
-        baseStyle: {
-          filledTrack: {
-            bg: "blue",
+      input: {
+        field: {
+          height: "60px",
+          borderRadius: "10px",
+          color: "black.300",
+          background: "gray.200",
+          fontSize: "15px",
+          fontWeight: "normal",
+          _placeholder: {
+            color: "gray",
+            fontWeight: "normal",
+            fontSize: "18px",
           },
         },
       },
