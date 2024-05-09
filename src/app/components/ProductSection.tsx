@@ -2,10 +2,8 @@ import {
   Box,
   Button,
   Container,
-  Divider,
   Flex,
   HStack,
-  Img,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -33,7 +31,6 @@ export function ProductSection(props: ProductSectionProps) {
         <HStack
           w="full"
           justify="space-between"
-          my="20"
           alignItems={{
             base: "center",
           }}
@@ -47,8 +44,9 @@ export function ProductSection(props: ProductSectionProps) {
           }}
           gap={{
             base: "20",
-            md: "0",
+            md: "20",
           }}
+          py={112}
         >
           <Box flex={1}>
             <Image
