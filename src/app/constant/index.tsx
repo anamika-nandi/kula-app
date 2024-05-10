@@ -29,7 +29,6 @@ interface TravelItem {
 }
 
 interface Travel {
-  TRAVEL_BG: string;
   TRAVEL_TEXT: string;
   TRAVEL_TITLE: string;
   TRAVEL_DESCRIPTION: string;
@@ -96,7 +95,6 @@ export const HOME: Home = {
     },
   },
   TRAVEL: {
-    TRAVEL_BG: "public/img/beauty-girl-bg.png",
     TRAVEL_TEXT: "travel and shopping discounts",
     TRAVEL_TITLE:
       "Imagine getting paid to help people save money on the products and services they are already buying.",

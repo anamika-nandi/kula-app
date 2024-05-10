@@ -66,6 +66,7 @@ export function ProductSection(props: ProductSectionProps) {
               }}
               minH="52px"
               h="full"
+              w="full"
               justifyContent="center"
               alignItems="center"
               textStyle="text-bg"

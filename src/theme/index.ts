@@ -1,11 +1,20 @@
 "use client";
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
-
+import { inputTheme } from "./foundations/input";
 import * as foundations from "./foundations";
 const theme = extendTheme(
   {
     ...foundations,
-
+    components: {
+      Button: {
+        baseStyle: {
+          h: "60px",
+          borderRadius: "10px",
+        },
+        variants: {},
+      },
+      Input: inputTheme,
+    },
     styles: {
       global: {
         "*": {
@@ -19,31 +28,6 @@ const theme = extendTheme(
         },
         html: {
           height: "100%",
-        },
-      },
-    },
-
-    components: {
-      Button: {
-        baseStyle: {
-          h: "60px",
-          borderRadius: "10px",
-        },
-        variants: {},
-      },
-      input: {
-        field: {
-          height: "60px",
-          borderRadius: "10px",
-          color: "black.300",
-          background: "gray.200",
-          fontSize: "15px",
-          fontWeight: "normal",
-          _placeholder: {
-            color: "gray",
-            fontWeight: "normal",
-            fontSize: "18px",
-          },
         },
       },
     },
