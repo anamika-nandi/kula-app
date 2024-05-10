@@ -12,10 +12,10 @@ export default function Home() {
     <Box>
       <Navbar navigation={HOME.NAVIGATION} />
       <Hero />
-      {/* <TravelShoppSec /> */}
-      {/* <ProductSection />
+      <TravelShoppSec />
+      <ProductSection />
       <MetalSection />
-      <Footer /> */}
+      <Footer />
     </Box>
   );
 }

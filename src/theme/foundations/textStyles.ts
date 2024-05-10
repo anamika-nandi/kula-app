@@ -20,7 +20,7 @@ const textStyles = {
   heading4: {
     fontSize: "32px",
     fontWeight: "normal",
-    lineHeight: "95px",
+    lineHeight: "auto",
   },
 
   "text-bg": {

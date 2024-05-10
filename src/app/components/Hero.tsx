@@ -90,7 +90,9 @@ export function Hero(props: HeroProps) {
                   />
                 </Box>
               </VStack>
-              <Text textStyle="heading4">{HOME.HERO.DESCRIPTION}</Text>
+              <Text textStyle="heading4" py="8" textAlign="center">
+                {HOME.HERO.DESCRIPTION}
+              </Text>
             </Box>
             <Box
               h="full"

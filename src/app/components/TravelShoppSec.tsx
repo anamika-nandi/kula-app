@@ -70,10 +70,10 @@ export function TravelShoppSec(props: TravelShoppSecProps) {
                 {HOME.TRAVEL.TRAVEL_DESCRIPTION}
               </Text>
             </VStack>
-            <Box bg="red">
+            <Box display={{ base: "none", md: "block" }}>
               <Image
-                height={680}
-                width={540}
+                height={560}
+                width={350}
                 src="/img/phone.png"
                 alt=" Product"
               />
