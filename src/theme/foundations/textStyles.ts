@@ -54,6 +54,11 @@ const textStyles = {
     lineHeight: "66px",
     fontWeight: "normal",
   },
+  "form-label": {
+    fontSize: "18px",
+    fontWeight: "normal",
+    color: "black.300",
+  },
 };
 
 export default textStyles;

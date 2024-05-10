@@ -91,11 +91,31 @@ export function Hero(props: HeroProps) {
               </VStack>
               <Text textStyle="heading4">{HOME.HERO.DESCRIPTION}</Text>
             </Box>
-            <Box h="full" minH={516} maxW="616px">
-              <Text fontSize="38px" fontWeight="bold" textTransform="uppercase">
-                {HOME.HERO.FORM.TITLE}
-              </Text>
-              <Text>{HOME.HERO.FORM.FORM_DESCRIPTION}</Text>
+            <Box h="full" bg="white" p="50px" borderRadius="18px">
+              <VStack>
+                <Text
+                  fontSize="38px"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  color="yellow.200"
+                  sx={{
+                    span: {
+                      color: "black.300",
+                    },
+                  }}
+                >
+                  {HOME.HERO.FORM.TITLE}
+                </Text>
+
+                <Text
+                  color="black.300"
+                  fontSize="22px"
+                  lineHeight="66px"
+                  fontWeight="medium"
+                >
+                  {HOME.HERO.FORM.FORM_DESCRIPTION}
+                </Text>
+              </VStack>
               <Formik
                 initialValues={{
                   firstName: "",
@@ -112,11 +132,14 @@ export function Hero(props: HeroProps) {
                     <Field name="firstName">
                       {({ field }: any) => (
                         <FormControl>
-                          <FormLabel>First Name</FormLabel>
+                          <FormLabel textStyle="form-label">
+                            First Name
+                          </FormLabel>
                           <Input
                             isRequired
                             placeholder="First Name"
                             {...field}
+                            bg="gray.200"
                           />
                         </FormControl>
                       )}
@@ -124,11 +147,14 @@ export function Hero(props: HeroProps) {
                     <Field name="lastName">
                       {({ field }: any) => (
                         <FormControl>
-                          <FormLabel>Last Name</FormLabel>
+                          <FormLabel textStyle="form-label">
+                            Last Name
+                          </FormLabel>
                           <Input
                             isRequired
                             placeholder="Last Name"
                             {...field}
+                            bg="gray.200"
                           />
                         </FormControl>
                       )}
@@ -136,12 +162,13 @@ export function Hero(props: HeroProps) {
                     <Field name="email">
                       {({ field }: any) => (
                         <FormControl>
-                          <FormLabel> Email</FormLabel>
+                          <FormLabel textStyle="form-label"> Email</FormLabel>
                           <Input
                             isRequired
                             placeholder="Email"
                             type="email"
                             {...field}
+                            bg="gray.200"
                           />
                         </FormControl>
                       )}
@@ -149,11 +176,15 @@ export function Hero(props: HeroProps) {
                     <Field name="country">
                       {({ field }: any) => (
                         <FormControl>
-                          <FormLabel> Country</FormLabel>
+                          <FormLabel textStyle="form-label"> Country</FormLabel>
                           <Select
                             isRequired
                             placeholder="Select Country"
                             {...field}
+                            bg="gray.200"
+                            textStyle="form-label"
+                            color="black.300"
+                            h="60px"
                           >
                             <option value="usa">USA</option>
                             <option value="uk">UK</option>
@@ -162,15 +193,22 @@ export function Hero(props: HeroProps) {
                         </FormControl>
                       )}
                     </Field>
-                    <Button
-                      bg="blue"
-                      color="white"
-                      mt="2"
-                      w="full"
+                    <Text
+                      textStyle="form-label"
+                      lineHeight="66px"
                       fontWeight="medium"
-                      type="submit"
                     >
-                      Sign Up
+                      We will send your login credentials to email above
+                    </Text>
+                    <Button
+                      bg="yellow.200"
+                      textStyle="form-label"
+                      textTransform="uppercase"
+                      w="full"
+                      type="submit"
+                      h="60px"
+                    >
+                      save my spot
                     </Button>
                   </VStack>
                 </Form>
