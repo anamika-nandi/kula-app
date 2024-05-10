@@ -35,12 +35,16 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
         <HStack
           p="5"
           h={{
-            md: "88px",
+            md: "150px",
           }}
           justify={{ md: "space-between" }}
           flexDir={{
             base: "column",
             md: "row",
+          }}
+          alignItems={{
+            base: "center",
+            md: "start",
           }}
         >
           <Box>

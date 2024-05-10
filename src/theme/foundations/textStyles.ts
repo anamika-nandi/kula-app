@@ -13,7 +13,7 @@ const textStyles = {
   },
   heading2: { fontSize: "30px", lineHeight: "42px", fontWeight: "bold" },
   heading3: {
-    fontSize: "102px",
+    fontSize: { base: "54px", md: "80px", xl: "102px" },
     fontWeight: "bold",
     textTransform: "uppercase",
   },
@@ -44,8 +44,8 @@ const textStyles = {
     fontWeight: "medium",
   },
   text4: {
-    fontSize: "44px",
-    lineHeight: "73px",
+    fontSize: { base: "32px", md: "32px", xl: "44px" },
+    lineHeight: { base: "42px", md: "50px", xl: "73px" },
     fontWeight: "bold",
   },
   "text-item": { fontSize: "22px", lineHeight: "42px", fontWeight: "medium" },

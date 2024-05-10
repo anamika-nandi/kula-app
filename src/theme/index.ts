@@ -22,7 +22,6 @@ const theme = extendTheme(
           boxSizing: "border-box",
         },
         body: {
-          // bg: "white",
           scrollBehavior: "smooth",
           minHeight: "100%",
         },

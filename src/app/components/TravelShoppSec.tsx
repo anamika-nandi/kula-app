@@ -27,6 +27,7 @@ export function TravelShoppSec(props: TravelShoppSecProps) {
               base: "20",
               md: "20",
             }}
+            alignItems="end"
           >
             <VStack alignItems="flex-start" gap="8" maxW={672} w="full">
               <Flex
@@ -69,10 +70,10 @@ export function TravelShoppSec(props: TravelShoppSecProps) {
                 {HOME.TRAVEL.TRAVEL_DESCRIPTION}
               </Text>
             </VStack>
-            <Box height={681} width={460}>
+            <Box bg="red">
               <Image
-                height={681}
-                width={460}
+                height={680}
+                width={540}
                 src="/img/phone.png"
                 alt=" Product"
               />
